@@ -1,0 +1,1216 @@
+2026-01-04 09:33:30,822 -  nornir.core -     INFO -        run() - Running task 'enrich_interfaces' with args {} on 7 hosts
+2026-01-04 09:33:35,629 -  nornir.core -     INFO -        run() - Running task 'render_and_push' with args {} on 7 hosts
+2026-01-04 09:33:35,685 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 20 column 2 (char 413)
+
+2026-01-04 09:33:35,686 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 20 column 2 (char 413)
+
+2026-01-04 09:33:35,687 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 20 column 2 (char 413)
+
+2026-01-04 09:33:35,687 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 20 column 2 (char 413)
+
+2026-01-04 09:33:35,693 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 20 column 2 (char 411)
+
+2026-01-04 09:33:35,693 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 20 column 2 (char 411)
+
+2026-01-04 09:33:35,696 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 20 column 2 (char 411)
+
+2026-01-04 09:34:57,692 -  nornir.core -     INFO -        run() - Running task 'enrich_interfaces' with args {} on 7 hosts
+2026-01-04 09:35:03,663 -  nornir.core -     INFO -        run() - Running task 'render_and_push' with args {} on 7 hosts
+2026-01-04 09:35:03,708 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+
+2026-01-04 09:35:03,717 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+
+2026-01-04 09:35:03,722 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+
+2026-01-04 09:35:03,728 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+
+2026-01-04 09:35:03,734 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+
+2026-01-04 09:35:03,744 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+
+2026-01-04 09:35:03,744 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 44, in render_and_push
+    config_dict = json.loads(rendered.result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ^^^^^^^^^^^^^^^^^^^^^^
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 2 column 1 (char 2)
+
+2026-01-04 09:36:40,530 -  nornir.core -     INFO -        run() - Running task 'enrich_interfaces' with args {} on 7 hosts
+2026-01-04 09:36:45,203 -  nornir.core -     INFO -        run() - Running task 'render_and_push' with args {} on 7 hosts
+2026-01-04 09:36:45,764 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "sp-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "sp-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.16/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.1.3/31"}}, {"path": "/interface[name=mgmt]/subinterface[index=0]/ipv4/addres...'"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:5, grpc_message:"Schema \'/\' has no child with name \'update\'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"sp-01\"}, \"ntp\": {\"network-...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"sp-01\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"update\": [{\"path\": \"/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.100.16/24\"}}, {\"path\": \"/interface[name=e1-1]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.1.3/31\"}}, {\"path\": \"/interface[name=mgmt]/subinterface[index=0]/ipv4/addres...\'"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: sp-01:57400, Error: Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "sp-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "sp-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.16/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.1.3/31"}}, {"path": "/interface[name=mgmt]/subinterface[index=0]/ipv4/addres...'
+
+2026-01-04 09:36:45,767 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:36:45,766 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "core-01"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.11/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.0.0/31"}}, {"path": "/interface[name=e1-2]/subinterface[index=0]/ipv4/addr...'"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Schema \'/\' has no child with name \'update\'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"core-01\"}, \"ntp\": {\"networ...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"core-01\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"update\": [{\"path\": \"/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.100.11/24\"}}, {\"path\": \"/interface[name=e1-1]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.0.0/31\"}}, {\"path\": \"/interface[name=e1-2]/subinterface[index=0]/ipv4/addr...\'", grpc_status:5}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-01:57400, Error: Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "core-01"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.11/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.0.0/31"}}, {"path": "/interface[name=e1-2]/subinterface[index=0]/ipv4/addr...'
+
+2026-01-04 09:36:45,768 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:36:45,770 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "df-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "df-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.17/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.1.5/31"}}, {"path": "/interface[name=mgmt]/subinterface[index=0]/ipv4/addres...'"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:5, grpc_message:"Schema \'/\' has no child with name \'update\'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"df-01\"}, \"ntp\": {\"network-...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"df-01\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"update\": [{\"path\": \"/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.100.17/24\"}}, {\"path\": \"/interface[name=e1-1]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.1.5/31\"}}, {\"path\": \"/interface[name=mgmt]/subinterface[index=0]/ipv4/addres...\'"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: df-01:57400, Error: Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "df-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "df-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.17/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.1.5/31"}}, {"path": "/interface[name=mgmt]/subinterface[index=0]/ipv4/addres...'
+
+2026-01-04 09:36:45,771 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:36:45,826 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "core-02"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-02"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.12/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.0.2/31"}}, {"path": "/interface[name=e1-2]/subinterface[index=0]/ipv4/addr...'"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:5, grpc_message:"Schema \'/\' has no child with name \'update\'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"core-02\"}, \"ntp\": {\"networ...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"core-02\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"update\": [{\"path\": \"/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.100.12/24\"}}, {\"path\": \"/interface[name=e1-1]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.0.2/31\"}}, {\"path\": \"/interface[name=e1-2]/subinterface[index=0]/ipv4/addr...\'"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-02:57400, Error: Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "core-02"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-02"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.12/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.0.2/31"}}, {"path": "/interface[name=e1-2]/subinterface[index=0]/ipv4/addr...'
+
+2026-01-04 09:36:45,828 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:36:45,831 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "core-04"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-04"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.14/24"}}, {"path": "/interface[name=e1-2]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.0.5/31"}}, {"path": "/interface[name=e1-3]/subinterface[index=0]/ipv4/addr...'"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:5, grpc_message:"Schema \'/\' has no child with name \'update\'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"core-04\"}, \"ntp\": {\"networ...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"core-04\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"update\": [{\"path\": \"/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.100.14/24\"}}, {\"path\": \"/interface[name=e1-2]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.0.5/31\"}}, {\"path\": \"/interface[name=e1-3]/subinterface[index=0]/ipv4/addr...\'"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-04:57400, Error: Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "core-04"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-04"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.14/24"}}, {"path": "/interface[name=e1-2]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.0.5/31"}}, {"path": "/interface[name=e1-3]/subinterface[index=0]/ipv4/addr...'
+
+2026-01-04 09:36:45,832 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "rj-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "rj-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.15/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.1.1/31"}}, {"path": "/interface[name=mgmt]/subinterface[index=0]/ipv4/addres...'"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Schema \'/\' has no child with name \'update\'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"rj-01\"}, \"ntp\": {\"network-...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"rj-01\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"update\": [{\"path\": \"/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.100.15/24\"}}, {\"path\": \"/interface[name=e1-1]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.1.1/31\"}}, {\"path\": \"/interface[name=mgmt]/subinterface[index=0]/ipv4/addres...\'", grpc_status:5}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: rj-01:57400, Error: Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "rj-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "rj-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.15/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.1.1/31"}}, {"path": "/interface[name=mgmt]/subinterface[index=0]/ipv4/addres...'
+
+2026-01-04 09:36:45,836 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:36:45,835 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.NOT_FOUND
+	details = "Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "core-03"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-03"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.13/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.0.4/31"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/addr...'"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Schema \'/\' has no child with name \'update\'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"core-03\"}, \"ntp\": {\"networ...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"core-03\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"update\": [{\"path\": \"/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.100.13/24\"}}, {\"path\": \"/interface[name=e1-1]/subinterface[index=0]/ipv4/address\", \"val\": {\"ip-prefix\": \"10.0.0.4/31\"}}, {\"path\": \"/interface[name=e1-1]/subinterface[index=0]/ipv4/addr...\'", grpc_status:5}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-03:57400, Error: Schema '/' has no child with name 'update'. Options are [bfd, network-instance, interface, platform, system, tunnel, routing-policy, qos, acl, tunnel-interface]: Parse error on line 1: {"system": {"name": {"host-name": "core-03"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-03"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "update": [{"path": "/interface[name=Loopback 0]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.100.13/24"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/address", "val": {"ip-prefix": "10.0.0.4/31"}}, {"path": "/interface[name=e1-1]/subinterface[index=0]/ipv4/addr...'
+
+2026-01-04 09:36:45,836 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:36:45,838 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:38:49,099 -  nornir.core -     INFO -        run() - Running task 'enrich_interfaces' with args {} on 7 hosts
+2026-01-04 09:39:03,555 -  nornir.core -     INFO -        run() - Running task 'render_and_push' with args {} on 7 hosts
+2026-01-04 09:39:04,117 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "core-01"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.11/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.0..."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Schema leaf \'/interface/name\' could not parse json element value \'mgmt\': Invalid value \"mgmt\": Must match the pattern \'(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\\d){0,1}(/m[1-6])?(/[1-9](\\d){0,1})?/(([1-9](\\d){0,1})|(1[0-1]\\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\\d){0,2})|(1000)))\': Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"core-01\"}, \"ntp\": {\"networ...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"core-01\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"interface\": [{\"name\": \"Loopback 0\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.100.11/24\"}]}}]}, {\"name\": \"e1-1\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.0..."}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-01:57400, Error: Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "core-01"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.11/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.0...
+
+2026-01-04 09:39:04,119 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "core-03"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-03"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.13/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.0..."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Schema leaf \'/interface/name\' could not parse json element value \'mgmt\': Invalid value \"mgmt\": Must match the pattern \'(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\\d){0,1}(/m[1-6])?(/[1-9](\\d){0,1})?/(([1-9](\\d){0,1})|(1[0-1]\\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\\d){0,2})|(1000)))\': Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"core-03\"}, \"ntp\": {\"networ...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"core-03\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"interface\": [{\"name\": \"Loopback 0\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.100.13/24\"}]}}]}, {\"name\": \"e1-1\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.0..."}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-03:57400, Error: Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "core-03"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-03"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.13/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.0...
+
+2026-01-04 09:39:04,121 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:39:04,122 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:39:04,151 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "rj-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "rj-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.15/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.1.1..."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Schema leaf \'/interface/name\' could not parse json element value \'mgmt\': Invalid value \"mgmt\": Must match the pattern \'(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\\d){0,1}(/m[1-6])?(/[1-9](\\d){0,1})?/(([1-9](\\d){0,1})|(1[0-1]\\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\\d){0,2})|(1000)))\': Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"rj-01\"}, \"ntp\": {\"network-...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"rj-01\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"interface\": [{\"name\": \"Loopback 0\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.100.15/24\"}]}}]}, {\"name\": \"e1-1\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.1.1...", grpc_status:3}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: rj-01:57400, Error: Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "rj-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "rj-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.15/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.1.1...
+
+2026-01-04 09:39:04,151 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:39:04,164 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "sp-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "sp-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.16/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.1.3..."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Schema leaf \'/interface/name\' could not parse json element value \'mgmt\': Invalid value \"mgmt\": Must match the pattern \'(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\\d){0,1}(/m[1-6])?(/[1-9](\\d){0,1})?/(([1-9](\\d){0,1})|(1[0-1]\\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\\d){0,2})|(1000)))\': Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"sp-01\"}, \"ntp\": {\"network-...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"sp-01\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"interface\": [{\"name\": \"Loopback 0\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.100.16/24\"}]}}]}, {\"name\": \"e1-1\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.1.3..."}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: sp-01:57400, Error: Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "sp-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "sp-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.16/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.1.3...
+
+2026-01-04 09:39:04,164 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:39:04,176 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "core-04"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-04"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.14/24"}]}}]}, {"name": "e1-2", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.0..."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Schema leaf \'/interface/name\' could not parse json element value \'mgmt\': Invalid value \"mgmt\": Must match the pattern \'(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\\d){0,1}(/m[1-6])?(/[1-9](\\d){0,1})?/(([1-9](\\d){0,1})|(1[0-1]\\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\\d){0,2})|(1000)))\': Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"core-04\"}, \"ntp\": {\"networ...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"core-04\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"interface\": [{\"name\": \"Loopback 0\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.100.14/24\"}]}}]}, {\"name\": \"e1-2\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.0..."}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-04:57400, Error: Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "core-04"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-04"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.14/24"}]}}]}, {"name": "e1-2", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.0...
+
+2026-01-04 09:39:04,178 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:39:04,184 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "core-02"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-02"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.12/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.0..."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Schema leaf \'/interface/name\' could not parse json element value \'mgmt\': Invalid value \"mgmt\": Must match the pattern \'(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\\d){0,1}(/m[1-6])?(/[1-9](\\d){0,1})?/(([1-9](\\d){0,1})|(1[0-1]\\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\\d){0,2})|(1000)))\': Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"core-02\"}, \"ntp\": {\"networ...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"core-02\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"interface\": [{\"name\": \"Loopback 0\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.100.12/24\"}]}}]}, {\"name\": \"e1-1\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.0..."}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-02:57400, Error: Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "core-02"}, "ntp": {"networ...
+Input:
+'{"system": {"name": {"host-name": "core-02"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.12/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.0...
+
+2026-01-04 09:39:04,185 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:39:04,190 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "df-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "df-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.17/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.1.5..."
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Schema leaf \'/interface/name\' could not parse json element value \'mgmt\': Invalid value \"mgmt\": Must match the pattern \'(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\\d){0,1}(/m[1-6])?(/[1-9](\\d){0,1})?/(([1-9](\\d){0,1})|(1[0-1]\\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\\d){0,2})|(1000)))\': Parse error on line 1: {\"system\": {\"name\": {\"host-name\": \"df-01\"}, \"ntp\": {\"network-...\nInput:\n\'{\"system\": {\"name\": {\"host-name\": \"df-01\"}, \"ntp\": {\"network-instance\": \"mgmt\", \"server\": [{\"address\": \"a.st1.ntp.br\"}, {\"address\": \"b.st1.ntp.br\"}, {\"address\": \"c.st1.ntp.br\"}, {\"address\": \"d.st1.ntp.br\"}]}}, \"interface\": [{\"name\": \"Loopback 0\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.100.17/24\"}]}}]}, {\"name\": \"e1-1\", \"subinterface\": [{\"index\": 0, \"ipv4\": {\"address\": [{\"ip-prefix\": \"10.0.1.5...", grpc_status:3}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: df-01:57400, Error: Schema leaf '/interface/name' could not parse json element value 'mgmt': Invalid value "mgmt": Must match the pattern '(mgmt0|mgmt0-standby|system0|sync0|lo(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lif-.*|vhn-.*|enp(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])s(0|[1-9]|[1-2][0-9]|3[0-1])f[0-7]|ethernet-([1-9](\d){0,1}(/m[1-6])?(/[1-9](\d){0,1})?/(([1-9](\d){0,1})|(1[0-1]\d)|(12[0-8])))|irb(0|1[0-9][0-9]|2([0-4][0-9]|5[0-5])|[1-9][0-9]|[1-9])|lag(([1-9](\d){0,2})|(1000)))': Parse error on line 1: {"system": {"name": {"host-name": "df-01"}, "ntp": {"network-...
+Input:
+'{"system": {"name": {"host-name": "df-01"}, "ntp": {"network-instance": "mgmt", "server": [{"address": "a.st1.ntp.br"}, {"address": "b.st1.ntp.br"}, {"address": "c.st1.ntp.br"}, {"address": "d.st1.ntp.br"}]}}, "interface": [{"name": "Loopback 0", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.100.17/24"}]}}]}, {"name": "e1-1", "subinterface": [{"index": 0, "ipv4": {"address": [{"ip-prefix": "10.0.1.5...
+
+2026-01-04 09:39:04,190 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:47:52,001 -  nornir.core -     INFO -        run() - Running task 'enrich_interfaces' with args {} on 7 hosts
+2026-01-04 09:47:56,873 -  nornir.core -     INFO -        run() - Running task 'render_and_push' with args {} on 7 hosts
+2026-01-04 09:47:57,422 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.13/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Error in path: .interface{.name==\"mgmt0\"}.subinterface{.index==\"0\"}.ipv4.address{.ip-prefix==\"192.168.100.13/24\"}\n    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present\n"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-03:57400, Error: Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.13/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+
+
+2026-01-04 09:47:57,423 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:47:57,464 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.15/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in path: .interface{.name==\"mgmt0\"}.subinterface{.index==\"0\"}.ipv4.address{.ip-prefix==\"192.168.100.15/24\"}\n    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present\n", grpc_status:3}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: rj-01:57400, Error: Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.15/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+
+
+2026-01-04 09:47:57,470 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:47:57,503 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.17/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Error in path: .interface{.name==\"mgmt0\"}.subinterface{.index==\"0\"}.ipv4.address{.ip-prefix==\"192.168.100.17/24\"}\n    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present\n"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: df-01:57400, Error: Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.17/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+
+
+2026-01-04 09:47:57,505 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:47:57,511 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.14/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_message:"Error in path: .interface{.name==\"mgmt0\"}.subinterface{.index==\"0\"}.ipv4.address{.ip-prefix==\"192.168.100.14/24\"}\n    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present\n", grpc_status:3}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-04:57400, Error: Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.14/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+
+
+2026-01-04 09:47:57,512 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:47:57,548 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.12/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Error in path: .interface{.name==\"mgmt0\"}.subinterface{.index==\"0\"}.ipv4.address{.ip-prefix==\"192.168.100.12/24\"}\n    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present\n"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-02:57400, Error: Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.12/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+
+
+2026-01-04 09:47:57,549 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:47:57,563 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.16/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Error in path: .interface{.name==\"mgmt0\"}.subinterface{.index==\"0\"}.ipv4.address{.ip-prefix==\"192.168.100.16/24\"}\n    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present\n"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: sp-01:57400, Error: Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.16/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+
+
+2026-01-04 09:47:57,564 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:47:57,576 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'gnmi_set' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 692, in set
+    gnmi_message_response = self.__stub.Set(gnmi_message_request, metadata=self.__metadata)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 1166, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/grpc/_channel.py", line 996, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)  # pytype: disable=not-instantiable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.INVALID_ARGUMENT
+	details = "Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.11/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+"
+	debug_error_string = "UNKNOWN:Error received from peer  {grpc_status:3, grpc_message:"Error in path: .interface{.name==\"mgmt0\"}.subinterface{.index==\"0\"}.ipv4.address{.ip-prefix==\"192.168.100.11/24\"}\n    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present\n"}"
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_pygnmi/tasks/set.py", line 18, in gnmi_set
+    result = gnmi_conn.set(delete=delete,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/pygnmi/client.py", line 764, in set
+    raise gNMIException(f"GRPC ERROR Host: {self.__target_path}, Error: {err.details()}", err)
+pygnmi.client.gNMIException: GRPC ERROR Host: core-01:57400, Error: Error in path: .interface{.name=="mgmt0"}.subinterface{.index=="0"}.ipv4.address{.ip-prefix=="192.168.100.11/24"}
+    [InvalidArgument] ipv4 address not configurable while ipv4 dhcp-client present
+
+
+2026-01-04 09:47:57,577 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'render_and_push' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/./netbox.py", line 47, in render_and_push
+    task.run(
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: gnmi_set (failed)
+
+
+2026-01-04 09:48:49,361 -  nornir.core -     INFO -        run() - Running task 'enrich_interfaces' with args {} on 7 hosts
+2026-01-04 09:48:54,117 -  nornir.core -     INFO -        run() - Running task 'render_and_push' with args {} on 7 hosts

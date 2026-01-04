@@ -1,0 +1,21 @@
+connection_options:
+  pygnmi:
+    port: 57400
+    timeout: 10
+    insecure: true
+    ssl: false
+    username: admin
+    password: NokiaSrl1!
+
+
+data:
+  dns_servers:
+    - 8.8.8.8
+    - 9.9.9.9
+    - 1.1.1.1
+
+  ntp_servers:
+    -  a.st1.ntp.br
+    -  b.st1.ntp.br
+    -  c.st1.ntp.br
+    -  d.st1.ntp.br

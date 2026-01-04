@@ -1,0 +1,13 @@
+.git*
+*.md
+build*
+docker-compose*
+env
+test-configuration
+.netbox/.git*
+.netbox/.pre-commit-config.yaml
+.netbox/.readthedocs.yaml
+.netbox/.tx
+.netbox/contrib
+.netbox/scripts
+.netbox/upgrade.sh

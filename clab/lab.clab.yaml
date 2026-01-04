@@ -1,0 +1,134 @@
+---
+name: lab
+prefix: "" # Empty string to not add a prefix to the containers
+
+mgmt:
+  network: lab
+  ipv4-subnet: 192.168.100.0/24
+
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux
+      type: ixr-d2
+    linux:
+      image: ghcr.io/hellt/network-multitool
+
+  nodes:
+
+    core-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.11
+    core-02:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.12
+    core-03:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.13
+    core-04:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.14
+    rj-01:
+      kind: nokia_srlinux
+      type: ixr-d3
+      mgmt-ipv4: 192.168.100.21
+    sp-01:
+      kind: nokia_srlinux
+      type: ixr-d3
+      mgmt-ipv4: 192.168.100.22
+    df-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.23
+    #client1:
+    #  kind: linux
+    #  image: ghcr.io/hellt/network-multitool
+    #  exec:
+    #    - ip address add 192.168.20.1/24 dev eth1
+    #    - ip route add 192.168.10.0/24 via 192.168.20.254
+    #    - iperf3 -s -p 5201 -D
+    #client2:
+    #  kind: linux
+    #  image: ghcr.io/hellt/network-multitool
+    #  exec:
+    #    - ip address add 192.168.10.1/24 dev eth1
+    #    - ip route add 192.168.20.0/24 via 192.168.10.254
+
+  #Telemetry Stack
+    #gnmic:
+    #  kind: linux
+    #  mgmt-ipv4: 192.168.100.120
+    #  image: ghcr.io/openconfig/gnmic:0.39.1
+    #  binds:
+    #    - configs/gnmic-config.yml:/gnmic-config.yml:ro
+    #  cmd: --config /gnmic-config.yml --log subscribe
+#
+#
+    #prometheus:
+    #  kind: linux
+    #  mgmt-ipv4: 192.168.100.121
+    #  image: quay.io/prometheus/prometheus:v2.54.1
+    #  binds:
+    #    - configs/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    #  cmd: --config.file=/etc/prometheus/prometheus.yml
+    #  ports:
+    #    - 9090:9090
+#
+#
+    #grafana:
+    #  kind: linux
+    #  mgmt-ipv4: 192.168.100.122
+    #  image: grafana/grafana:11.2.0
+    #  binds:
+    #    - configs/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
+    #    - configs/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
+    #    - configs/dashboards:/var/lib/grafana/dashboards
+    #  ports:
+    #    - 3000:3000
+    #  env:
+    #    GF_INSTALL_PLUGINS: https://algenty.github.io/flowcharting-repository/archives/#agenty-flowcharting-panel-1.0.0d.220606199-SNAPSHOT.zip;agenty-flowcharting-panel
+    #    # env vars to enable anonymous access
+    #    GF_ORG_ROLE: "Admin"
+    #    GF_ORG_NAME: "Main Org"
+    #    GF_AUTH_ANONYMOUS_ENABLED: "true"
+    #    GF_AUTH_ANONYMOUS: "true"
+
+
+     ### LOGGING STACK ###
+    #promtail:
+    #  kind: linux
+    #  mgmt-ipv4: 192.168.100.123
+    #  image: grafana/promtail:3.2.0
+    #  binds:
+    #    - configs/promtail-config.yml:/etc/promtail/promtail-config.yml
+    #  cmd: --config.file=/etc/promtail/promtail-config.yml
+    #  ports:
+    #    - 9080:9080
+#
+    #loki:
+    #  kind: linux
+    #  mgmt-ipv4: 192.168.100.124
+    #  image: grafana/loki:3.2.0
+    #  binds:
+    #    - configs/loki-config.yml:/etc/loki/loki-config.yml
+    #  cmd: --config.file=/etc/loki/loki-config.yml
+    #  ports:
+    #    - 3100:3100
+
+  links:
+
+    # CORE Connections
+    - endpoints: [core-01:e1-1, core-02:e1-2]
+    - endpoints: [core-02:e1-1, core-03:e1-2]
+    - endpoints: [core-03:e1-1, core-04:e1-2]
+    - endpoints: [core-04:e1-1, core-01:e1-2]
+    # RJ Connections
+    - endpoints: [rj-01:e1-1, core-01:e1-3]
+    # SP Connections
+    - endpoints: [sp-01:e1-1, core-02:e1-3]
+    # DF Connections
+    - endpoints: [df-01:e1-1, core-04:e1-3]
+
+
+
+
+

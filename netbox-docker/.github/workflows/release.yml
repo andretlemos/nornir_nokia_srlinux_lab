@@ -1,0 +1,88 @@
+---
+name: release
+
+on:
+  release:
+    types:
+      - published
+  schedule:
+    - cron: "45 5 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        build:
+          - { "cmd": "./build-latest.sh", "branch": "release" }
+          - { "cmd": "./build.sh main", "branch": "release" }
+          # Build pre release images from our develop branch
+          # This is used to test the latest changes before they are merged into the main branch
+          - { "cmd": "PRERELEASE=true ./build-latest.sh", "branch": "develop" }
+          - { "cmd": "./build.sh feature", "branch": "develop" }
+        platform:
+          - linux/amd64,linux/arm64
+      fail-fast: false
+    runs-on: ubuntu-24.04
+    name: Builds new NetBox Docker Images
+    env:
+      GH_ACTION: enable
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      IMAGE_NAMES: docker.io/netboxcommunity/netbox quay.io/netboxcommunity/netbox ghcr.io/netbox-community/netbox
+    steps:
+      - id: source-checkout
+        name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.build.branch }}
+      - id: set-netbox-docker-version
+        name: Get Version of NetBox Docker
+        run: echo "version=$(cat VERSION)" >>"$GITHUB_OUTPUT"
+        shell: bash
+      - id: check-build-needed
+        name: Check if the build is needed for '${{ matrix.build.cmd }}'
+        env:
+          CHECK_ONLY: "true"
+        run: ${{ matrix.build.cmd }}
+      # docker.io
+      - id: docker-io-login
+        name: Login to docker.io
+        uses: docker/login-action@v3
+        with:
+          registry: docker.io
+          username: ${{ secrets.dockerhub_username }}
+          password: ${{ secrets.dockerhub_password }}
+        if: steps.check-build-needed.outputs.skipped != 'true'
+      - id: buildx-setup
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          version: "lab:latest"
+          driver: cloud
+          endpoint: "netboxcommunity/netbox-default"
+        if: steps.check-build-needed.outputs.skipped != 'true'
+      # quay.io
+      - id: quay-io-login
+        name: Login to Quay.io
+        uses: docker/login-action@v3
+        with:
+          registry: quay.io
+          username: ${{ secrets.quayio_username }}
+          password: ${{ secrets.quayio_password }}
+        if: steps.check-build-needed.outputs.skipped != 'true'
+      # ghcr.io
+      - id: ghcr-io-login
+        name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+        if: steps.check-build-needed.outputs.skipped != 'true'
+      - id: build-and-push
+        name: Push the image
+        run: ${{ matrix.build.cmd }} --push
+        if: steps.check-build-needed.outputs.skipped != 'true'
+        env:
+          BUILDX_PLATFORM: ${{ matrix.platform }}
+          BUILDX_BUILDER_NAME: ${{ steps.buildx-setup.outputs.name }}

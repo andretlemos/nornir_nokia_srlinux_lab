@@ -1,0 +1,17 @@
+
+  "system": {
+    "name": {
+      "host-name": "{{ host.hostname }}"
+    },
+    "ntp": {
+      "network-instance": "mgmt",
+      "server": [
+        {% for server in host.defaults.data.ntp_servers %}
+        {
+          "address": "{{ server }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  }
+

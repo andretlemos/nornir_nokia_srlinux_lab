@@ -1,0 +1,5 @@
+---
+paths:
+  .github/workflows/**/*.{yml,yaml}:
+    ignore:
+      - ".*ubuntu-24.04-arm.*"

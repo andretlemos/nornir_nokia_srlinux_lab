@@ -1,0 +1,18 @@
+"interface": [
+  {% for iface in host.interfaces if iface.interface != "mgmt0" %}
+  {
+    "name": "{{ iface.interface }}",
+    "subinterface": [
+      {
+        "index": 0,
+        "ipv4": {
+          "address": [
+            { "ip-prefix": "{{ iface.ip }}" }
+          ]
+        }
+      }
+    ]
+  }{% if not loop.last %},{% endif %}
+  {% endfor %}
+]
+
