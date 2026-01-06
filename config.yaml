@@ -1,10 +1,16 @@
 
+#inventory:
+#    plugin: SimpleInventory
+#    options:
+#        host_file: "inventory/hosts.yaml"
+#        group_file: "inventory/groups.yaml"
+#        defaults_file: "inventory/defaults.yaml"
 inventory:
-    plugin: SimpleInventory
+    plugin: "NBInventory2"
     options:
-        host_file: "inventory/hosts.yaml"
-        group_file: "inventory/groups.yaml"
-        defaults_file: "inventory/defaults.yaml"
+        nb_url: "http://localhost:8000"
+        nb_token: "b2ed8d99d3f2453082f2c65e4503c953470d0883"
+
 runner:
     plugin: threaded
     options:
