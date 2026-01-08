@@ -1,7 +1,7 @@
 "interface": [
-  {% for iface in host.interfaces if iface.interface != "mgmt0" %}
+  {% for iface in host.data.interfaces if iface.name != "mgmt0" %}
   {
-    "name": "{{ iface.interface }}",
+    "name": "{{ iface.name }}",
     "subinterface": [
       {
         "index": 0,
@@ -15,4 +15,5 @@
   }{% if not loop.last %},{% endif %}
   {% endfor %}
 ]
+
 

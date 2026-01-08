@@ -1,15 +1,10 @@
-
-#inventory:
-#    plugin: SimpleInventory
-#    options:
-#        host_file: "inventory/hosts.yaml"
-#        group_file: "inventory/groups.yaml"
-#        defaults_file: "inventory/defaults.yaml"
 inventory:
-    plugin: "NBInventory2"
+    plugin: "NetBoxInventory2"
     options:
         nb_url: "http://localhost:8000"
         nb_token: "b2ed8d99d3f2453082f2c65e4503c953470d0883"
+        group_file: "inventory/groups.yaml"
+        defaults_file: "inventory/defaults.yaml"
 
 runner:
     plugin: threaded
