@@ -1,68 +1,76 @@
 # nornir_nokia_srlinux_lab
 
-A small lab repository for automating Nokia SR Linux device deployments and NetBox integration using Nornir, containerized NetBox, and Containerlab topologies.
+A lab repository for automating Nokia SR Linux device configuration and NetBox integration using Nornir, Containerlab topologies, and a containerized NetBox.
 
-**Overview**
+## Overview
 
-- **Purpose:** Provide automation, inventory, and configuration templates for a Nokia SR Linux lab using Nornir and NetBox.
-- **Scope:** Contains Containerlab topologies, NetBox docker setup, Nornir inventory, templates, and helper scripts.
+- Purpose: Provide inventory, templates, scripts, and helper tooling to build and automate a small SR Linux lab.
+- Key capabilities: Containerlab topologies, NetBox (docker) integration, Nornir inventory and templating, config rendering.
 
-**Quickstart**
+## Prerequisites
 
-Prerequisites:
-- Docker / Docker Compose (for NetBox docker)
+- Linux host (tested on Ubuntu)
+- Docker & Docker Compose (for running NetBox)
 - Python 3.8+ and pip
-- Containerlab (if you want to deploy the lab topology)
+- Optional: Containerlab (to deploy the virtual topology)
 
-Get started (basic steps):
+## Quickstart
 
-1. Install Python deps:
+1. Clone the repo:
 
 ```bash
-uv venv
-source .venv/bin/activate
-uv pip install -r requirements.txt
+git clone https://your.repo/nornir_nokia_srlinux_lab.git
+cd nornir_nokia_srlinux_lab
 ```
 
-2. (Optional) Launch NetBox (from `netbox-docker`):
+2. Create and activate a Python virtual environment, then install dependencies:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+3. (Optional) Start NetBox locally (from `netbox-docker`):
 
 ```bash
 cd netbox-docker
 docker compose up -d
 ```
 
-2.1 Import the database on Netbox
+4. (Optional) Import a NetBox DB snapshot (if you have one):
 
 ```bash
 cd backup_netbox
 ./netbox_database_import.sh
 ```
 
-3. (Optional) Deploy the lab with Containerlab:
+5. (Optional) Deploy the lab topology with Containerlab:
 
 ```bash
 sudo containerlab deploy --topo clab/lab.clab.yaml
 ```
 
-4. Use the automation scripts:
+6. Render or push device configs using the project's scripts (examples):
 
 ```bash
-python3 deploy_config.py
+python3 nornir_deploy_config.py --help
 ```
 
-See the individual scripts for available options.
+## Repository layout
 
-**Repository Structure**
+- `clab/` — Containerlab topology and per-node configuration trees.
+- `netbox-docker/` — Docker build and compose files to run NetBox locally.
+- `inventory/` — Nornir inventory files: `hosts.yaml`, `groups.yaml`, `defaults.yaml`.
+- `templates/` — Jinja2 templates for rendering device JSON/configs.
+- `rendered_config/` — Example rendered configuration output for lab devices.
+- `configuration/` — Python helper modules used across the project.
+- `backup_netbox/` — Scripts to export/import NetBox DB snapshots.
+- `clab/lab.clab.yaml` — Topology used for Containerlab.
+- `nornir_deploy_config.py` — Main script to drive config rendering/push (see `--help`).
 
-- `clab/` — Containerlab topology files and per-node config trees used by the virtual lab.
-- `netbox-docker/` — Containerized NetBox build and docker-compose configuration for a local NetBox instance.
-- `inventory/` — Nornir-style inventory data: `hosts.yaml`, `groups.yaml`, `defaults.yaml`.
-- `templates/` — Jinja2 templates used to render device config and system JSON.
-- `configuration/` — Python helper modules used by the project (logging, plugins, extra helpers).
-- `deploy_config.py` — main deployment/config helper script (previously `netbox.py`).
-- `backup_netbox/` — helper scripts for exporting/importing NetBox DB snapshots.
+## Notes & tips
 
-**Usage Notes**
-
-- Review `inventory/` and `templates/` before running automation to adapt to your lab.
-- `deploy_config.py` is the primary entrypoint for applying configuration or pushing data to NetBox; open it to see CLI options and environment requirements.
+- Inspect and adapt `inventory/` and the Jinja2 templates in `templates/` to fit your environment before running any push operations.
+- Use the virtual environment to avoid system package conflicts.
+- If you run NetBox locally, allow some time for services to become healthy before importing data.
