@@ -1,0 +1,72 @@
+{
+  
+
+"system": {
+  "name": {
+    "host-name": "CORE-01"
+  },
+  "ntp": {
+    "network-instance": "mgmt",
+    "server": [
+            {
+        "address": "a.st1.ntp.br"
+      },            {
+        "address": "b.st1.ntp.br"
+      },            {
+        "address": "c.st1.ntp.br"
+      }          ]
+  }
+}
+,
+  "interface": [
+    {
+    "name": "ethernet-1/1",
+    "subinterface": [
+      {
+        "index": 0,
+        "ipv4": {
+          "address": [
+            { "ip-prefix": "10.0.0.0/31" }
+          ]
+        }
+      }
+    ]
+  },    {
+    "name": "ethernet-1/2",
+    "subinterface": [
+      {
+        "index": 0,
+        "ipv4": {
+          "address": [
+            { "ip-prefix": "10.0.0.7/31" }
+          ]
+        }
+      }
+    ]
+  },    {
+    "name": "ethernet-1/3",
+    "subinterface": [
+      {
+        "index": 0,
+        "ipv4": {
+          "address": [
+            { "ip-prefix": "10.0.1.0/31" }
+          ]
+        }
+      }
+    ]
+  },    {
+    "name": "lo0",
+    "subinterface": [
+      {
+        "index": 0,
+        "ipv4": {
+          "address": [
+            { "ip-prefix": "10.0.100.11/24" }
+          ]
+        }
+      }
+    ]
+  }  ]
+
+}
