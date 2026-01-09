@@ -105,12 +105,17 @@ def push_config(task: Task) -> Result:
     )
     return Result(host=task.host, result=r.result)
 
-nr = nr.with_processors([RichProgressBar()])
-results = nr.run(task=get_ct_from_netbox)
-#print_result(results)
-results = nr.run(task=get_interfaces_from_netbox)
-#print_result(results)
-results = nr.run(task=render_template)
-#print_result(results)
-results = nr.run(task=push_config)
-print_result(results)
+def main(nr: InitNornir = nr):
+    nr = nr.with_processors([RichProgressBar()])
+    results = nr.run(task=get_ct_from_netbox)
+    #print_result(results)
+    results = nr.run(task=get_interfaces_from_netbox)
+    #print_result(results)
+    results = nr.run(task=render_template)
+    #print_result(results)
+    results = nr.run(task=push_config)
+    print_result(results)
+
+
+if __name__ == "__main__":
+    main()
