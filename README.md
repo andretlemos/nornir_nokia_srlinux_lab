@@ -31,30 +31,30 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. (Optional) Start NetBox locally (from `netbox-docker`):
+3. Start NetBox locally (from `netbox-docker`):
 
 ```bash
 cd netbox-docker
 docker compose up -d
 ```
 
-4. (Optional) Import a NetBox DB snapshot (if you have one):
+4.  Import a NetBox DB snapshot :
 
 ```bash
 cd backup_netbox
 ./netbox_database_import.sh
 ```
 
-5. (Optional) Deploy the lab topology with Containerlab:
+5. Deploy the lab topology with Containerlab:
 
 ```bash
 sudo containerlab deploy --topo clab/lab.clab.yaml
 ```
 
-6. Render or push device configs using the project's scripts (examples):
+6. Render or push device configs using the project's scripts:
 
 ```bash
-python3 nornir_deploy_config.py --help
+python3 nornir_deploy_config.py
 ```
 
 ## Repository layout
