@@ -7,4 +7,24 @@ connection_options:
     username: admin
     password: NokiaSrl1!
 
+  napalm:
+    hostname: admin
+    password: NokiaSrl1!
+
+  scrapli:
+    auth_username: admin
+    auth_password: NokiaSrl1!
+    auth_secondary: NokiaSrl1!
+    platform: nokia_srlinux
+    extras:
+      auth_strict_key: false
+
+  netmiko:
+    extras:
+      device_type: nokia_srl
+    username: admin
+    password: NokiaSrl1!
+#platform: srl
+
+
 

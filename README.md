@@ -54,7 +54,7 @@ sudo containerlab deploy --topo clab/lab.clab.yaml
 6. Render or push device configs using the project's scripts:
 
 ```bash
-python3 nornir_deploy_config.py
+python src/nornir_deploy_config.py
 ```
 
 ## Repository layout

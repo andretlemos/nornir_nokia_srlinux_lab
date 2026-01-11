@@ -1,8 +1,0 @@
-{% for host_name, host in hosts.items() %}
-{{ host_name }}:
-  hostname: {{ host.hostname }}
-  platform: {{ host.platform }}
-  groups: {% for group in host.groups %}
-    - {{ group }}
-          {% endfor %}
-{% endfor %}

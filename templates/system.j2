@@ -1,0 +1,5 @@
+set / system name {{ host.name }}
+set / system ntp network-instance default
+{% for server in host.data.ntp_servers %}
+set / system ntp server {{ server }}
+{% endfor %}

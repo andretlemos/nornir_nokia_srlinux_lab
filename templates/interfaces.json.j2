@@ -5,7 +5,12 @@
     "subinterface": [
       {
         "index": 0,
+        "admin-state": "enable",
+        {% if iface.name != "lo0" %}
+        "type": "routed",
+        {% endif %}
         "ipv4": {
+          "admin-state": "enable",
           "address": [
             { "ip-prefix": "{{ iface.ip }}" }
           ]
@@ -15,5 +20,3 @@
   }{% if not loop.last %},{% endif %}
   {% endfor %}
 ]
-
-
