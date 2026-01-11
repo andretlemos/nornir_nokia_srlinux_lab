@@ -1,6 +1,6 @@
 # nornir_nokia_srlinux_lab
 
-A lab repository for automating Nokia SR Linux device configuration and NetBox integration using Nornir, Containerlab topologies, and a containerized NetBox.
+A lab repository for automating Nokia SR Linux device configuration using Nornir, Netmiko, gNMI, Netbox and Containerlab.
 
 ## Overview
 
@@ -56,6 +56,11 @@ sudo containerlab deploy --topo clab/lab.clab.yaml
 ```bash
 python src/nornir_deploy_config.py
 ```
+
+## Topology
+
+![Architecture Diagram](images/topology.svg)
+
 
 ## Repository layout
 
