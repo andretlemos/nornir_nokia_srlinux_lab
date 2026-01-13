@@ -3,7 +3,7 @@
 
 "system": {
   "name": {
-    "host-name": "DF-01"
+    "host-name": "CORE-03"
   },
   "ntp": {
     "network-instance": "mgmt",
@@ -21,6 +21,7 @@
   "interface": [
     {
     "name": "ethernet-1/1",
+    "description": "CORE-03/CORE-04",
     "subinterface": [
       {
         "index": 0,
@@ -29,13 +30,30 @@
                 "ipv4": {
           "admin-state": "enable",
           "address": [
-            { "ip-prefix": "10.0.1.5/31" }
+            { "ip-prefix": "10.0.0.4/31" }
+          ]
+        }
+      }
+    ]
+  },    {
+    "name": "ethernet-1/2",
+    "description": "CORE-03/CORE-02",
+    "subinterface": [
+      {
+        "index": 0,
+        "admin-state": "enable",
+                "type": "routed",
+                "ipv4": {
+          "admin-state": "enable",
+          "address": [
+            { "ip-prefix": "10.0.0.3/31" }
           ]
         }
       }
     ]
   },    {
     "name": "lo0",
+    "description": "Loopback 0",
     "subinterface": [
       {
         "index": 0,
@@ -43,7 +61,7 @@
                 "ipv4": {
           "admin-state": "enable",
           "address": [
-            { "ip-prefix": "10.0.100.17/32" }
+            { "ip-prefix": "10.0.100.13/32" }
           ]
         }
       }
@@ -53,7 +71,7 @@
     {
   "name": "default",
   "interface": [
-        { "name": "ethernet-1/1.0" },        { "name": "lo0.0" }      ],
+        { "name": "ethernet-1/1.0" },        { "name": "ethernet-1/2.0" },        { "name": "lo0.0" }      ],
   "protocols": {
     "ospf": {
       "instance": [
@@ -61,7 +79,7 @@
           "name": "default",
           "version": "ospf-v2",
           "admin-state": "enable",
-          "router-id": "10.0.100.17",
+          "router-id": "10.0.100.13",
           "area": [
             {
               "area-id": "0.0.0.0",
@@ -73,6 +91,12 @@
                 }                ,{
                   "interface-name": "ethernet-1/1.0",
                   "passive": false,
+                  "interface-type":  "point-to-point",
+                  "admin-state": "enable"
+                }                ,{
+                  "interface-name": "ethernet-1/2.0",
+                  "passive": false,
+                  "interface-type":  "point-to-point",
                   "admin-state": "enable"
                 }              ]
             }

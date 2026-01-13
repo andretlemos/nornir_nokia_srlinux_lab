@@ -55,6 +55,7 @@ def get_interfaces_from_netbox(task: Task) -> Result:
 
         iface_list.append({
             "name": iface.name,
+            "description": iface.description,
             "ip": ip_address,
             "tags": [tag.name for tag in iface.tags]
         })
@@ -77,7 +78,7 @@ def render_template_cfg(task: Task) -> Result:
     r = task.run(
         task=template_file,
         template="srlinux.j2",
-        path="templates",
+        path="templates/set",
         interfaces=task.host.data.get("interfaces", []),
         config_context=task.host.data,
 
@@ -85,7 +86,7 @@ def render_template_cfg(task: Task) -> Result:
     )
     rendered = r.result
 
-    filename = f"src/rendered_config/{task.host.name}.cfg"
+    filename = f"src/rendered_config/set/{task.host.name}.cfg"
     with open(filename, "w") as f:
         f.write(rendered)
     print(f"\n--- {task.host.name} ---\n{rendered}\n")
@@ -105,7 +106,7 @@ def render_template_json(task: Task) -> Result:
     r = task.run(
         task=template_file,
         template="srlinux.json.j2",
-        path="templates",
+        path="templates/json",
         interfaces=task.host.data.get("interfaces", []),
         config_context=task.host.data,
 
@@ -113,7 +114,7 @@ def render_template_json(task: Task) -> Result:
     )
     rendered = r.result
 
-    filename = f"src/rendered_config/{task.host.name}.json"
+    filename = f"src/rendered_config/json/{task.host.name}.json"
     with open(filename, "w") as f:
         f.write(rendered)
     print(f"\n--- {task.host.name} ---\n{rendered}\n")
@@ -122,7 +123,7 @@ def render_template_json(task: Task) -> Result:
 
 def push_config_netmiko(task: Task) -> Result:
 
-    filename = f"src/rendered_config/{task.host.name}.cfg"
+    filename = f"src/rendered_config/set/{task.host.name}.cfg"
     with open(filename, "r") as f:
         rendered = f.read().splitlines()
 
@@ -142,7 +143,7 @@ def push_config_gnmi(task: Task) -> Result:
     Returns:
         Result: A result object containing the updated host data and the result of the gNMI set operation.
     """
-    filename = f"src/rendered_config/{task.host.name}.json"
+    filename = f"src/rendered_config/json/{task.host.name}.json"
     with open(filename, "r") as f:
         rendered = f.read()
     try:
@@ -163,17 +164,17 @@ def push_config_gnmi(task: Task) -> Result:
 def main(nr: InitNornir = nr):
     nr = nr.with_processors([RichProgressBar()])
     results = nr.run(task=get_ct_from_netbox)
-    #print_result(results)
+    print_result(results)
     results = nr.run(task=get_interfaces_from_netbox)
-    #print_result(results)
-    results = nr.run(task=render_template_cfg)
     print_result(results)
-    #results = nr.run(task=render_template_json)
+    #results = nr.run(task=render_template_cfg)
     #print_result(results)
-    results = nr.run(task=push_config_netmiko)
+    results = nr.run(task=render_template_json)
     print_result(results)
-    #results = nr.run(task=push_config_gnmi)
+    #results = nr.run(task=push_config_netmiko)
     #print_result(results)
+    results = nr.run(task=push_config_gnmi)
+    print_result(results)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,239 @@
+2026-01-13 11:19:59,982 -  nornir.core -     INFO -        run() - Running task 'get_ct_from_netbox' with args {} on 7 hosts
+2026-01-13 11:20:02,370 -  nornir.core -     INFO -        run() - Running task 'get_interfaces_from_netbox' with args {} on 7 hosts
+2026-01-13 11:20:16,752 -  nornir.core -     INFO -        run() - Running task 'render_template_json' with args {} on 7 hosts
+2026-01-13 11:20:16,829 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_jinja2/plugins/tasks/template_file.py", line 43, in template_file
+    text = t.render(host=task.host, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/json/srlinux.json.j2", line 3, in top-level template code
+    {% include "interfaces.json.j2" %},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "templates/json/interfaces.json.j2", line 5, in top-level template code
+    "description": "{{ iface.description }}",
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'description'
+
+2026-01-13 11:20:16,829 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_jinja2/plugins/tasks/template_file.py", line 43, in template_file
+    text = t.render(host=task.host, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/json/srlinux.json.j2", line 3, in top-level template code
+    {% include "interfaces.json.j2" %},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "templates/json/interfaces.json.j2", line 5, in top-level template code
+    "description": "{{ iface.description }}",
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'description'
+
+2026-01-13 11:20:16,830 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_jinja2/plugins/tasks/template_file.py", line 43, in template_file
+    text = t.render(host=task.host, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/json/srlinux.json.j2", line 3, in top-level template code
+    {% include "interfaces.json.j2" %},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "templates/json/interfaces.json.j2", line 5, in top-level template code
+    "description": "{{ iface.description }}",
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'description'
+
+2026-01-13 11:20:16,831 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_jinja2/plugins/tasks/template_file.py", line 43, in template_file
+    text = t.render(host=task.host, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/json/srlinux.json.j2", line 3, in top-level template code
+    {% include "interfaces.json.j2" %},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "templates/json/interfaces.json.j2", line 5, in top-level template code
+    "description": "{{ iface.description }}",
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'description'
+
+2026-01-13 11:20:16,831 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_jinja2/plugins/tasks/template_file.py", line 43, in template_file
+    text = t.render(host=task.host, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/json/srlinux.json.j2", line 3, in top-level template code
+    {% include "interfaces.json.j2" %},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "templates/json/interfaces.json.j2", line 5, in top-level template code
+    "description": "{{ iface.description }}",
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'description'
+
+2026-01-13 11:20:16,837 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_jinja2/plugins/tasks/template_file.py", line 43, in template_file
+    text = t.render(host=task.host, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/json/srlinux.json.j2", line 3, in top-level template code
+    {% include "interfaces.json.j2" %},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "templates/json/interfaces.json.j2", line 5, in top-level template code
+    "description": "{{ iface.description }}",
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'description'
+
+2026-01-13 11:20:16,838 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'template_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir_jinja2/plugins/tasks/template_file.py", line 43, in template_file
+    text = t.render(host=task.host, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "templates/json/srlinux.json.j2", line 3, in top-level template code
+    {% include "interfaces.json.j2" %},
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "templates/json/interfaces.json.j2", line 5, in top-level template code
+    "description": "{{ iface.description }}",
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'description'
+
+2026-01-13 11:20:16,841 - nornir.core.task -    ERROR -      start() - Host 'CORE-02': task 'render_template_json' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/src/nornir_deploy_config.py", line 105, in render_template_json
+    r = task.run(
+        ^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2026-01-13 11:20:16,841 - nornir.core.task -    ERROR -      start() - Host 'CORE-03': task 'render_template_json' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/src/nornir_deploy_config.py", line 105, in render_template_json
+    r = task.run(
+        ^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2026-01-13 11:20:16,843 - nornir.core.task -    ERROR -      start() - Host 'SP-01': task 'render_template_json' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/src/nornir_deploy_config.py", line 105, in render_template_json
+    r = task.run(
+        ^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2026-01-13 11:20:16,844 - nornir.core.task -    ERROR -      start() - Host 'CORE-01': task 'render_template_json' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/src/nornir_deploy_config.py", line 105, in render_template_json
+    r = task.run(
+        ^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2026-01-13 11:20:16,845 - nornir.core.task -    ERROR -      start() - Host 'DF-01': task 'render_template_json' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/src/nornir_deploy_config.py", line 105, in render_template_json
+    r = task.run(
+        ^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2026-01-13 11:20:16,845 - nornir.core.task -    ERROR -      start() - Host 'RJ-01': task 'render_template_json' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/src/nornir_deploy_config.py", line 105, in render_template_json
+    r = task.run(
+        ^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2026-01-13 11:20:16,847 - nornir.core.task -    ERROR -      start() - Host 'CORE-04': task 'render_template_json' failed with traceback:
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/src/nornir_deploy_config.py", line 105, in render_template_json
+    r = task.run(
+        ^^^^^^^^^
+  File "/home/ubuntu/Projects/nornir_nokia_srlinux_lab/.venv/lib/python3.12/site-packages/nornir/core/task.py", line 173, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: template_file (failed)
+
+
+2026-01-13 11:20:16,894 -  nornir.core -  WARNING -        run() - Task 'push_config_gnmi' has not been run – 0 hosts selected
+2026-01-13 11:21:24,654 -  nornir.core -     INFO -        run() - Running task 'get_ct_from_netbox' with args {} on 7 hosts
+2026-01-13 11:21:28,475 -  nornir.core -     INFO -        run() - Running task 'get_interfaces_from_netbox' with args {} on 7 hosts
+2026-01-13 11:21:31,804 -  nornir.core -     INFO -        run() - Running task 'render_template_json' with args {} on 7 hosts
+2026-01-13 11:21:33,012 -  nornir.core -     INFO -        run() - Running task 'push_config_gnmi' with args {} on 7 hosts

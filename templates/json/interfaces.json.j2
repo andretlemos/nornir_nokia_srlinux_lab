@@ -2,6 +2,7 @@
   {% for iface in host.data.interfaces if iface.name != "mgmt0" %}
   {
     "name": "{{ iface.name }}",
+    "description": "{{ iface.description }}",
     "subinterface": [
       {
         "index": 0,

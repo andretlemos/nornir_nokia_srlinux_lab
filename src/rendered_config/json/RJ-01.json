@@ -21,6 +21,7 @@
   "interface": [
     {
     "name": "ethernet-1/1",
+    "description": "RJ-01/CORE-01",
     "subinterface": [
       {
         "index": 0,
@@ -36,6 +37,7 @@
     ]
   },    {
     "name": "lo0",
+    "description": "Loopback 0",
     "subinterface": [
       {
         "index": 0,
@@ -73,6 +75,7 @@
                 }                ,{
                   "interface-name": "ethernet-1/1.0",
                   "passive": false,
+                  "interface-type":  "point-to-point",
                   "admin-state": "enable"
                 }              ]
             }

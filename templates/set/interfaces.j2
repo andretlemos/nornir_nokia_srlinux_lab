@@ -1,5 +1,6 @@
 {% for iface in host.data.interfaces if iface.name != "mgmt0" %}
 set / interface {{ iface.name }} admin-state enable
+set / interface {{ iface.name }} description {{ iface.description }}
 set / interface {{ iface.name }} subinterface 0 ipv4 admin-state enable
 set / interface {{ iface.name }} subinterface 0 ipv4 address {{ iface.ip }}
 {% endfor %}

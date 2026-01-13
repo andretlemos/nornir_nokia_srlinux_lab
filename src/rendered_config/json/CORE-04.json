@@ -20,7 +20,24 @@
 ,
   "interface": [
     {
+    "name": "ethernet-1/1",
+    "description": "CORE-04/CORE-01",
+    "subinterface": [
+      {
+        "index": 0,
+        "admin-state": "enable",
+                "type": "routed",
+                "ipv4": {
+          "admin-state": "enable",
+          "address": [
+            { "ip-prefix": "10.0.0.6/31" }
+          ]
+        }
+      }
+    ]
+  },    {
     "name": "ethernet-1/2",
+    "description": "CORE-04/CORE-03",
     "subinterface": [
       {
         "index": 0,
@@ -36,6 +53,7 @@
     ]
   },    {
     "name": "ethernet-1/3",
+    "description": "CORE-04/DF-01",
     "subinterface": [
       {
         "index": 0,
@@ -51,6 +69,7 @@
     ]
   },    {
     "name": "lo0",
+    "description": "Loopback 0",
     "subinterface": [
       {
         "index": 0,
@@ -68,7 +87,7 @@
     {
   "name": "default",
   "interface": [
-        { "name": "ethernet-1/2.0" },        { "name": "ethernet-1/3.0" },        { "name": "lo0.0" }      ],
+        { "name": "ethernet-1/1.0" },        { "name": "ethernet-1/2.0" },        { "name": "ethernet-1/3.0" },        { "name": "lo0.0" }      ],
   "protocols": {
     "ospf": {
       "instance": [
@@ -86,12 +105,19 @@
                   "passive": true,
                   "admin-state": "enable"
                 }                ,{
+                  "interface-name": "ethernet-1/1.0",
+                  "passive": false,
+                  "interface-type":  "point-to-point",
+                  "admin-state": "enable"
+                }                ,{
                   "interface-name": "ethernet-1/2.0",
                   "passive": false,
+                  "interface-type":  "point-to-point",
                   "admin-state": "enable"
                 }                ,{
                   "interface-name": "ethernet-1/3.0",
                   "passive": false,
+                  "interface-type":  "point-to-point",
                   "admin-state": "enable"
                 }              ]
             }
