@@ -2,13 +2,13 @@ from nornir import InitNornir
 from nornir_jinja2.plugins.tasks import template_file
 from nornir_rich.functions import print_result
 from nornir_rich.progress_bar import RichProgressBar
-from nornir_netmiko.tasks import netmiko_send_config as send_config
 from nornir.core.task import Task, Result
 from dotenv import load_dotenv
 import os
 import pynetbox
 from nornir_pygnmi.tasks import gnmi_set
 import json
+import yaml
 
 load_dotenv(".env")
 # Connect to NetBox
@@ -31,7 +31,7 @@ def get_ct_from_netbox(task: Task) -> Result:
     device = nb.dcim.devices.get(name=task.host.name)
     if device and device.config_context:
       task.host.data.update(device.config_context)
-    return Result(host=task.host, result={device})
+    return Result(host=task.host, result="Got config context for {device}")
 
 def get_interfaces_from_netbox(task: Task) -> Result:
 
@@ -60,37 +60,19 @@ def get_interfaces_from_netbox(task: Task) -> Result:
             "tags": [tag.name for tag in iface.tags]
         })
 
-    task.host.data.update({"interfaces": iface_list})
-    return Result(host=task.host, result="Interfaces merged for {task.host.name}")
+        if iface.name.lower().startswith("lo0"):
+            lo0_ip = ip_address.split("/")[0]
+            lo0_description = iface.description
 
 
-def render_template_cfg(task: Task) -> Result:
-    """
-    Renders the SR Linux configuration template for a given device using Jinja2
-    and writes the rendered configuration to a file.
-
-    Args:
-        task (Task): The task to be executed.
-
-    Returns:
-        Result: A result object containing the updated host data and a message indicating the rendered configuration was written to a file.
-    """
-    r = task.run(
-        task=template_file,
-        template="srlinux.j2",
-        path="templates/set",
-        interfaces=task.host.data.get("interfaces", []),
-        config_context=task.host.data,
+    task.host.data.update({
+        "interfaces": iface_list,
+        "lo0_ip": lo0_ip,
+        "lo0_description": lo0_description
+        })
+    return Result(host=task.host, result="Got interfaces data for {task.host.name}")
 
 
-    )
-    rendered = r.result
-
-    filename = f"src/rendered_config/set/{task.host.name}.cfg"
-    with open(filename, "w") as f:
-        f.write(rendered)
-    print(f"\n--- {task.host.name} ---\n{rendered}\n")
-    return Result(host=task.host, result=f"Rendered config written to {filename}")
 
 def render_template_json(task: Task) -> Result:
     """
@@ -105,33 +87,22 @@ def render_template_json(task: Task) -> Result:
     """
     r = task.run(
         task=template_file,
-        template="srlinux.json.j2",
-        path="templates/json",
+        template="srlinux.j2",
+        path="./src/templates/",
         interfaces=task.host.data.get("interfaces", []),
         config_context=task.host.data,
-
-
     )
-    rendered = r.result
 
-    filename = f"src/rendered_config/json/{task.host.name}.json"
+    rendered = r.result
+    parsed = yaml.safe_load(rendered)
+    rendered_json = json.dumps(parsed, indent=2)
+
+    filename = f"src/rendered_config/{task.host.name}.json"
     with open(filename, "w") as f:
-        f.write(rendered)
-    print(f"\n--- {task.host.name} ---\n{rendered}\n")
+        f.write(rendered_json)
+
     return Result(host=task.host, result=f"Rendered config written to {filename}")
 
-
-def push_config_netmiko(task: Task) -> Result:
-
-    filename = f"src/rendered_config/set/{task.host.name}.cfg"
-    with open(filename, "r") as f:
-        rendered = f.read().splitlines()
-
-    r = task.run(
-        task=send_config,
-        config_commands=rendered
-    )
-    return Result(host=task.host, result=r.result)
 
 def push_config_gnmi(task: Task) -> Result:
     """
@@ -143,13 +114,9 @@ def push_config_gnmi(task: Task) -> Result:
     Returns:
         Result: A result object containing the updated host data and the result of the gNMI set operation.
     """
-    filename = f"src/rendered_config/json/{task.host.name}.json"
+    filename = f"src/rendered_config/{task.host.name}.json"
     with open(filename, "r") as f:
         rendered = f.read()
-    try:
-        json.loads(rendered)
-    except json.JSONDecodeError:
-        return Result(host=task.host, result=f"Invalid JSON in {filename}")
 
 
     r = task.run(
@@ -161,17 +128,15 @@ def push_config_gnmi(task: Task) -> Result:
     )
     return Result(host=task.host, result=r.result)
 
+
 def main(nr: InitNornir = nr):
+
     nr = nr.with_processors([RichProgressBar()])
     results = nr.run(task=get_ct_from_netbox)
-    print_result(results)
+    #print_result(results)
     results = nr.run(task=get_interfaces_from_netbox)
-    print_result(results)
-    #results = nr.run(task=render_template_cfg)
     #print_result(results)
     results = nr.run(task=render_template_json)
-    print_result(results)
-    #results = nr.run(task=push_config_netmiko)
     #print_result(results)
     results = nr.run(task=push_config_gnmi)
     print_result(results)

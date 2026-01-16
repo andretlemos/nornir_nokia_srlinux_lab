@@ -1,0 +1,27 @@
+      bgp:
+        autonomous-system: {{ host.data.ibgp.asn }}
+{% if host.data.lo0_ip %}
+        router-id: "{{ host.data.lo0_ip }}"
+{% endif %}
+        afi-safi:
+          - afi-safi-name: ipv4-unicast
+            admin-state: enable
+        group:
+          - group-name: "{{ host.data.ibgp.peer_group }}"
+            peer-as: {{ host.data.ibgp.asn }}
+            next-hop-self: true
+            afi-safi:
+              - afi-safi-name: ipv4-unicast
+                admin-state: enable
+{% set valid_neighbors = host.data.ibgp.neighbors | rejectattr("address", "equalto", host.data.lo0_ip) | list %}
+{% if valid_neighbors %}
+        neighbor:
+{% for neighbor in valid_neighbors %}
+          - peer-address: "{{ neighbor.address }}"
+            peer-as: {{ host.data.ibgp.asn }}
+            description: "{{ neighbor.description }}"
+            peer-group: "{{ host.data.ibgp.peer_group }}"
+            transport:
+              local-address: lo0.0
+{% endfor %}
+{% endif %}

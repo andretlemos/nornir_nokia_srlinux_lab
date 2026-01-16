@@ -1,0 +1,13 @@
+{% include "system.j2" %}
+{% include "interfaces.j2" %}
+network-instance:
+  - name: default
+    admin-state: enable
+    interface:
+{% for iface in interfaces if 'OSPF' in iface.tags %}
+      - name: "{{ iface.name }}.0"
+{% endfor %}
+    protocols:
+{% include "ospf.j2"  %}
+{% include "bgp.j2" %}
+

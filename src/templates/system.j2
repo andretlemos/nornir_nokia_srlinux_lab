@@ -1,0 +1,11 @@
+system:
+  name:
+    host-name: "{{ host.name }}"
+  ntp:
+    network-instance: mgmt
+{% if host.data.ntp_servers %}
+    server:
+{% for server in host.data.ntp_servers %}
+      - address: "{{ server }}"
+{% endfor %}
+{% endif %}

@@ -1,0 +1,18 @@
+{% set routed_ifaces = host.data.interfaces | rejectattr("name", "equalto", "mgmt0") | list %}
+{% if routed_ifaces %}
+interface:
+{% for iface in routed_ifaces %}
+  - name: "{{ iface.name }}"
+    subinterface:
+      - index: 0
+        admin-state: enable
+        description: "{{ iface.description }}"
+{% if iface.name != "lo0" %}
+        type: routed
+{% endif %}
+        ipv4:
+          admin-state: enable
+          address:
+            - ip-prefix: "{{ iface.ip }}"
+{% endfor %}
+{% endif %}

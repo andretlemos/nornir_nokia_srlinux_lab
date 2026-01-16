@@ -1,0 +1,211 @@
+{
+  "system": {
+    "name": {
+      "host-name": "CORE-03"
+    },
+    "ntp": {
+      "network-instance": "mgmt",
+      "server": [
+        {
+          "address": "a.st1.ntp.br"
+        },
+        {
+          "address": "b.st1.ntp.br"
+        },
+        {
+          "address": "c.st1.ntp.br"
+        }
+      ]
+    }
+  },
+  "interface": [
+    {
+      "name": "ethernet-1/1",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "description": "CORE-03/CORE-04",
+          "type": "routed",
+          "ipv4": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "10.0.0.4/31"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/2",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "description": "CORE-03/CORE-02",
+          "type": "routed",
+          "ipv4": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "10.0.0.3/31"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "lo0",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "description": "Loopback 0",
+          "ipv4": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "10.0.100.13/32"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "network-instance": [
+    {
+      "name": "default",
+      "admin-state": "enable",
+      "interface": [
+        {
+          "name": "ethernet-1/1.0"
+        },
+        {
+          "name": "ethernet-1/2.0"
+        },
+        {
+          "name": "lo0.0"
+        }
+      ],
+      "protocols": {
+        "ospf": {
+          "instance": [
+            {
+              "name": "default",
+              "version": "ospf-v2",
+              "admin-state": "enable",
+              "router-id": "10.0.100.13",
+              "area": [
+                {
+                  "area-id": "0.0.0.0",
+                  "interface": [
+                    {
+                      "interface-name": "lo0.0",
+                      "passive": true,
+                      "admin-state": "enable"
+                    },
+                    {
+                      "interface-name": "ethernet-1/1.0",
+                      "passive": false,
+                      "interface-type": "point-to-point",
+                      "admin-state": "enable"
+                    },
+                    {
+                      "interface-name": "ethernet-1/2.0",
+                      "passive": false,
+                      "interface-type": "point-to-point",
+                      "admin-state": "enable"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "bgp": {
+          "autonomous-system": 65500,
+          "router-id": "10.0.100.13",
+          "afi-safi": [
+            {
+              "afi-safi-name": "ipv4-unicast",
+              "admin-state": "enable"
+            }
+          ],
+          "group": [
+            {
+              "group-name": "IBGP",
+              "peer-as": 65500,
+              "next-hop-self": true,
+              "afi-safi": [
+                {
+                  "afi-safi-name": "ipv4-unicast",
+                  "admin-state": "enable"
+                }
+              ]
+            }
+          ],
+          "neighbor": [
+            {
+              "peer-address": "10.0.100.11",
+              "peer-as": 65500,
+              "description": "CORE-01",
+              "peer-group": "IBGP",
+              "transport": {
+                "local-address": "lo0.0"
+              }
+            },
+            {
+              "peer-address": "10.0.100.12",
+              "peer-as": 65500,
+              "description": "CORE-02",
+              "peer-group": "IBGP",
+              "transport": {
+                "local-address": "lo0.0"
+              }
+            },
+            {
+              "peer-address": "10.0.100.14",
+              "peer-as": 65500,
+              "description": "CORE-04",
+              "peer-group": "IBGP",
+              "transport": {
+                "local-address": "lo0.0"
+              }
+            },
+            {
+              "peer-address": "10.0.100.15",
+              "peer-as": 65500,
+              "description": "RJ-01",
+              "peer-group": "IBGP",
+              "transport": {
+                "local-address": "lo0.0"
+              }
+            },
+            {
+              "peer-address": "10.0.100.16",
+              "peer-as": 65500,
+              "description": "SP-01",
+              "peer-group": "IBGP",
+              "transport": {
+                "local-address": "lo0.0"
+              }
+            },
+            {
+              "peer-address": "10.0.100.17",
+              "peer-as": 65500,
+              "description": "DF-01",
+              "peer-group": "IBGP",
+              "transport": {
+                "local-address": "lo0.0"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
