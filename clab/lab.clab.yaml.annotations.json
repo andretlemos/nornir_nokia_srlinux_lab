@@ -383,6 +383,48 @@
         "lng": 9.007895390625677
       },
       "interfacePattern": "e1-{n}"
+    },
+    {
+      "id": "client2",
+      "position": {
+        "x": 301,
+        "y": 175
+      }
+    },
+    {
+      "id": "client1",
+      "position": {
+        "x": 21,
+        "y": 147
+      }
+    },
+    {
+      "id": "peer-02",
+      "position": {
+        "x": 21,
+        "y": 21
+      }
+    },
+    {
+      "id": "peer-01",
+      "position": {
+        "x": 21,
+        "y": 287
+      }
+    },
+    {
+      "id": "isp-02",
+      "position": {
+        "x": 21,
+        "y": 35
+      }
+    },
+    {
+      "id": "isp-01",
+      "position": {
+        "x": 21,
+        "y": 273
+      }
     }
   ],
   "aliasEndpointAnnotations": [],

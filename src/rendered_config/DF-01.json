@@ -39,6 +39,44 @@
       ]
     },
     {
+      "name": "ethernet-1/2",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "description": "DF-01/ISP-01",
+          "type": "routed",
+          "ipv4": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "172.30.0.1/31"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "ethernet-1/3",
+      "subinterface": [
+        {
+          "index": 0,
+          "admin-state": "enable",
+          "description": "DF-01/Client1",
+          "type": "routed",
+          "ipv4": {
+            "admin-state": "enable",
+            "address": [
+              {
+                "ip-prefix": "192.168.30.1/24"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "name": "lo0",
       "subinterface": [
         {
@@ -57,6 +95,44 @@
       ]
     }
   ],
+  "routing-policy": {
+    "policy": [
+      {
+        "name": "EXPORT-TO-ISP",
+        "statement": [
+          {
+            "name": 10,
+            "match": {
+              "protocol": "local"
+            },
+            "action": {
+              "policy-result": "accept"
+            }
+          },
+          {
+            "name": 20,
+            "match": {
+              "protocol": "ospfv2"
+            },
+            "action": {
+              "policy-result": "accept"
+            }
+          }
+        ]
+      },
+      {
+        "name": "IMPORT-FROM-ISP",
+        "statement": [
+          {
+            "name": 10,
+            "action": {
+              "policy-result": "accept"
+            }
+          }
+        ]
+      }
+    ]
+  },
   "network-instance": [
     {
       "name": "default",
@@ -64,6 +140,12 @@
       "interface": [
         {
           "name": "ethernet-1/1.0"
+        },
+        {
+          "name": "ethernet-1/2.0"
+        },
+        {
+          "name": "ethernet-1/3.0"
         },
         {
           "name": "lo0.0"
@@ -91,6 +173,12 @@
                       "passive": false,
                       "interface-type": "point-to-point",
                       "admin-state": "enable"
+                    },
+                    {
+                      "interface-name": "ethernet-1/3.0",
+                      "passive": false,
+                      "interface-type": "point-to-point",
+                      "admin-state": "enable"
                     }
                   ]
                 }
@@ -99,7 +187,7 @@
           ]
         },
         "bgp": {
-          "autonomous-system": 65500,
+          "autonomous-system": "65500",
           "router-id": "10.0.100.17",
           "afi-safi": [
             {
@@ -110,8 +198,24 @@
           "group": [
             {
               "group-name": "IBGP",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "next-hop-self": true,
+              "afi-safi": [
+                {
+                  "afi-safi-name": "ipv4-unicast",
+                  "admin-state": "enable"
+                }
+              ]
+            },
+            {
+              "group-name": "EBGP-DEFAULT",
+              "peer-as": "65501",
+              "import-policy": [
+                "IMPORT-FROM-ISP"
+              ],
+              "export-policy": [
+                "EXPORT-TO-ISP"
+              ],
               "afi-safi": [
                 {
                   "afi-safi-name": "ipv4-unicast",
@@ -123,7 +227,7 @@
           "neighbor": [
             {
               "peer-address": "10.0.100.11",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "CORE-01",
               "peer-group": "IBGP",
               "transport": {
@@ -132,7 +236,7 @@
             },
             {
               "peer-address": "10.0.100.12",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "CORE-02",
               "peer-group": "IBGP",
               "transport": {
@@ -141,7 +245,7 @@
             },
             {
               "peer-address": "10.0.100.13",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "CORE-03",
               "peer-group": "IBGP",
               "transport": {
@@ -150,7 +254,7 @@
             },
             {
               "peer-address": "10.0.100.14",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "CORE-04",
               "peer-group": "IBGP",
               "transport": {
@@ -159,7 +263,7 @@
             },
             {
               "peer-address": "10.0.100.15",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "RJ-01",
               "peer-group": "IBGP",
               "transport": {
@@ -168,12 +272,24 @@
             },
             {
               "peer-address": "10.0.100.16",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "SP-01",
               "peer-group": "IBGP",
               "transport": {
                 "local-address": "lo0.0"
               }
+            },
+            {
+              "peer-address": "172.30.0.0",
+              "peer-as": "65501",
+              "description": "BGP ISP-01",
+              "peer-group": "EBGP-DEFAULT",
+              "afi-safi": [
+                {
+                  "afi-safi-name": "ipv4-unicast",
+                  "admin-state": "enable"
+                }
+              ]
             }
           ]
         }

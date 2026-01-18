@@ -1,0 +1,19 @@
+routing-policy:
+  policy:
+    - name: EXPORT-TO-ISP
+      statement:
+        - name: 10
+          match:
+            protocol: local
+          action:
+            policy-result: accept
+        - name: 20
+          match:
+            protocol: ospfv2
+          action:
+            policy-result: accept
+    - name: IMPORT-FROM-ISP
+      statement:
+        - name: 10
+          action:
+            policy-result: accept

@@ -1,10 +1,17 @@
 {% include "system.j2" %}
 {% include "interfaces.j2" %}
+
+{% for group in host.data.ebgp_sessions %}
+{% if group.export_policy%}
+{% include "policy.j2" %}
+{% endif %}
+{% endfor %}
+
 network-instance:
   - name: default
     admin-state: enable
     interface:
-{% for iface in interfaces if 'OSPF' in iface.tags %}
+{% for iface in interfaces if iface.enabled and iface.name != "mgmt0" %}
       - name: "{{ iface.name }}.0"
 {% endfor %}
     protocols:

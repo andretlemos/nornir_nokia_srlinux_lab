@@ -1,0 +1,418 @@
+name: lab
+prefix: ''
+mgmt:
+  network: lab
+  ipv4-subnet: 192.168.100.0/24
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux
+      type: ixr-d2
+    linux:
+      image: ghcr.io/hellt/network-multitool
+  nodes:
+    core-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.11
+      labels:
+        graph-level: 16
+        graph-icon: switch
+    core-02:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.12
+      labels:
+        graph-level: 17
+    core-03:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.13
+      labels:
+        graph-level: 18
+    core-04:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.14
+      labels:
+        graph-level: 19
+    rj-01:
+      kind: nokia_srlinux
+      type: ixr-d3
+      mgmt-ipv4: 192.168.100.21
+      labels:
+        graph-level: 23
+    sp-01:
+      kind: nokia_srlinux
+      type: ixr-d3
+      mgmt-ipv4: 192.168.100.22
+      labels:
+        graph-level: 24
+    df-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.23
+      labels:
+        graph-level: 20
+    peer-01:
+      kind: linux
+      image: quay.io/frrouting/frr:8.4.1
+      mgmt-ipv4: 192.168.100.31
+      labels:
+        graph-level: 21
+    peer-02:
+      kind: linux
+      image: quay.io/frrouting/frr:8.4.1
+      mgmt-ipv4: 192.168.100.32
+      labels:
+        graph-level: 22
+    client1:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool
+      exec:
+      - ip address add 192.168.30.2/24 dev eth1
+      - iperf3 -s -p 5201 -D
+      labels:
+        graph-level: 13
+        graph-icon: host
+    client2:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool
+      exec:
+      - ip address add 192.168.20.2/24 dev eth1
+      labels:
+        graph-level: 15
+        graph-icon: network
+  links:
+  - endpoints: ['core-01:e1-1', 'core-02:e1-2']
+  - endpoints: ['core-02:e1-1', 'core-03:e1-2']
+  - endpoints: ['core-03:e1-1', 'core-04:e1-2']
+  - endpoints: ['core-04:e1-1', 'core-01:e1-2']
+  - endpoints: ['rj-01:e1-1', 'core-01:e1-3']
+  - endpoints: ['sp-01:e1-1', 'core-02:e1-3']
+  - endpoints: ['df-01:e1-1', 'core-04:e1-3']
+  - endpoints: ['df-01:e1-2', 'peer-01:eth1']
+  - endpoints: ['rj-01:e1-2', 'peer-02:eth2']
+  - endpoints: ['df-01:e1-3', 'client1:eth1']
+  - endpoints: ['sp-01:e1-3', 'client2:eth1']
+annotations:
+  freeTextAnnotations:
+  - id: freeText_1768311738095_7f538326
+    text: 10.0.0.1/31
+    position:
+      x: 187
+      y: 116
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768311819039_941167f4
+    text: 10.0.0.0/31
+    position:
+      x: 143
+      y: 116
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768311841463_413a27cb
+    text: 10.0.0.2/31
+    position:
+      x: 189
+      y: 157
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768311866015_ab42397a
+    text: 10.0.0.3/31
+    position:
+      x: 191
+      y: 187
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768311876591_e7e6c7b6
+    text: 10.0.0.4/31
+    position:
+      x: 184
+      y: 227
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768311888743_0cc9f631
+    text: 10.0.0.5/31
+    position:
+      x: 144
+      y: 228
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768311906039_7fbed15b
+    text: 10.0.0.6/31
+    position:
+      x: 139
+      y: 188
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768311920183_8f31f427
+    text: 10.0.0.7/31
+    position:
+      x: 140
+      y: 156
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768311991495_0d88602f
+    text: 10.0.1.0/31
+    position:
+      x: 85
+      y: 142
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768312011327_eba12a00
+    text: 10.0.1.1/31
+    position:
+      x: 57
+      y: 114
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768312026423_0c341b83
+    text: 10.0.1.4/31
+    position:
+      x: 86
+      y: 227
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768312047406_3fc51d9b
+    text: 10.0.1.5/31
+    position:
+      x: 54
+      y: 198
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768312087647_3bf9f390
+    text: 10.0.1.3/31
+    position:
+      x: 285
+      y: 143
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768312098526_8347862f
+    text: 10.0.1.2/31
+    position:
+      x: 241
+      y: 116
+    fontSize: 5
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  - id: freeText_1768312240974_b6ba7b8a
+    text: ASN 65500
+    position:
+      x: 155
+      y: 88
+    fontSize: 14
+    fontColor: '#FFFFFF'
+    backgroundColor: transparent
+    fontWeight: normal
+    fontStyle: normal
+    textDecoration: none
+    textAlign: left
+    fontFamily: monospace
+    rotation: 0
+    roundedBackground: true
+  freeShapeAnnotations:
+  - id: freeShape_1768312167359_16def204
+    shapeType: rectangle
+    position:
+      x: 154
+      y: 150
+    fillColor: '#ffffff'
+    fillOpacity: 0
+    borderColor: '#15cb18'
+    borderWidth: 2
+    borderStyle: solid
+    rotation: 0
+    width: 331
+    height: 135
+    cornerRadius: 0
+  groupStyleAnnotations: []
+  cloudNodeAnnotations: []
+  nodeAnnotations:
+  - id: core-01
+    icon: router
+    position:
+      x: 105
+      y: 105
+    geoCoordinates:
+      lat: 48.684826888402256
+      lng: 9.007895390625677
+    interfacePattern: e1-{n}
+  - id: core-02
+    icon: router
+    position:
+      x: 203
+      y: 105
+    geoCoordinates:
+      lat: 48.684826888402256
+      lng: 9.007895390625677
+    interfacePattern: e1-{n}
+  - id: core-03
+    icon: router
+    position:
+      x: 203
+      y: 189
+    geoCoordinates:
+      lat: 48.684826888402256
+      lng: 9.007895390625677
+    interfacePattern: e1-{n}
+  - id: core-04
+    icon: router
+    position:
+      x: 105
+      y: 189
+    geoCoordinates:
+      lat: 48.684826888402256
+      lng: 9.007895390625677
+    interfacePattern: e1-{n}
+  - id: rj-01
+    icon: router
+    position:
+      x: 21
+      y: 105
+    geoCoordinates:
+      lat: 48.684826888402256
+      lng: 9.007895390625677
+    interfacePattern: e1-{n}
+  - id: sp-01
+    icon: router
+    position:
+      x: 301
+      y: 105
+    geoCoordinates:
+      lat: 48.684826888402256
+      lng: 9.007895390625677
+    interfacePattern: e1-{n}
+  - id: df-01
+    icon: router
+    position:
+      x: 21
+      y: 189
+    geoCoordinates:
+      lat: 48.684826888402256
+      lng: 9.007895390625677
+    interfacePattern: e1-{n}
+  - id: client2
+    position:
+      x: 301
+      y: 175
+  - id: client1
+    position:
+      x: 21
+      y: 147
+  - id: peer-02
+    position:
+      x: 21
+      y: 21
+  - id: peer-01
+    position:
+      x: 21
+      y: 287
+  aliasEndpointAnnotations: []
+  networkNodeAnnotations: []

@@ -1,0 +1,9 @@
+FROM netboxcommunity/netbox:latest
+USER root
+COPY ./plugin_requirements.txt /opt/netbox/
+# Use uv for installation (standard in 2026)
+RUN /usr/local/bin/uv pip install -r /opt/netbox/plugin_requirements.txt
+# Collect static files (requires a dummy SECRET_KEY of 50+ chars)
+RUN SECRET_KEY="dummy-key-at-least-50-characters-long-for-building-only" \
+    /opt/netbox/venv/bin/python /opt/netbox/netbox/manage.py collectstatic --no-input
+USER unit

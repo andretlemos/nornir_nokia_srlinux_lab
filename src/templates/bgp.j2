@@ -1,5 +1,5 @@
       bgp:
-        autonomous-system: {{ host.data.ibgp.asn }}
+        autonomous-system: "{{ host.data.ibgp.asn }}"
 {% if host.data.lo0_ip %}
         router-id: "{{ host.data.lo0_ip }}"
 {% endif %}
@@ -8,20 +8,44 @@
             admin-state: enable
         group:
           - group-name: "{{ host.data.ibgp.peer_group }}"
-            peer-as: {{ host.data.ibgp.asn }}
+            peer-as: "{{ host.data.ibgp.asn }}"
             next-hop-self: true
             afi-safi:
               - afi-safi-name: ipv4-unicast
                 admin-state: enable
-{% set valid_neighbors = host.data.ibgp.neighbors | rejectattr("address", "equalto", host.data.lo0_ip) | list %}
-{% if valid_neighbors %}
+
+{% for group in host.data.ebgp_sessions %}
+          - group-name: "{{ group.peer_group }}"
+            peer-as: "{{ group.remote_asn }}"
+{% if group.import_policy%}
+            import-policy: ["{{ group.import_policy }}"]
+{% endif %}
+{% if group.export_policy%}
+            export-policy: ["{{ group.export_policy }}"]
+{% endif %}
+            afi-safi:
+              - afi-safi-name: ipv4-unicast
+                admin-state: enable
+
+{% endfor %}
+
         neighbor:
+{% set valid_neighbors = host.data.ibgp.neighbors | rejectattr("address", "equalto", host.data.lo0_ip) | list %}
 {% for neighbor in valid_neighbors %}
           - peer-address: "{{ neighbor.address }}"
-            peer-as: {{ host.data.ibgp.asn }}
+            peer-as: "{{ host.data.ibgp.asn }}"
             description: "{{ neighbor.description }}"
             peer-group: "{{ host.data.ibgp.peer_group }}"
             transport:
               local-address: lo0.0
 {% endfor %}
-{% endif %}
+{% for neighbor in host.data.ebgp_sessions %}
+          - peer-address: "{{ neighbor.remote_address }}"
+            peer-as: "{{ neighbor.remote_asn }}"
+            description: "{{ neighbor.description }}"
+            peer-group: "{{ neighbor.peer_group }}"
+            afi-safi:
+              - afi-safi-name: ipv4-unicast
+                admin-state: "{{ neighbor.status }}"
+{% endfor %}
+

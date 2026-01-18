@@ -9,13 +9,12 @@ mgmt:
 topology:
   kinds:
     nokia_srlinux:
-      image: ghcr.io/nokia/srlinux
+      image: ghcr.io/nokia/srlinux:25.10.1
       type: ixr-d2
     linux:
       image: ghcr.io/hellt/network-multitool
 
   nodes:
-
     core-01:
       kind: nokia_srlinux
       mgmt-ipv4: 192.168.100.11
@@ -39,19 +38,34 @@ topology:
     df-01:
       kind: nokia_srlinux
       mgmt-ipv4: 192.168.100.23
-    #client1:
-    #  kind: linux
-    #  image: ghcr.io/hellt/network-multitool
-    #  exec:
-    #    - ip address add 192.168.20.1/24 dev eth1
-    #    - ip route add 192.168.10.0/24 via 192.168.20.254
-    #    - iperf3 -s -p 5201 -D
-    #client2:
-    #  kind: linux
-    #  image: ghcr.io/hellt/network-multitool
-    #  exec:
-    #    - ip address add 192.168.10.1/24 dev eth1
-    #    - ip route add 192.168.20.0/24 via 192.168.10.254
+    isp-01:
+      kind: linux
+      image: quay.io/frrouting/frr:8.4.1
+      mgmt-ipv4: 192.168.100.31
+      binds:
+        - configs/frr-daemons.cfg:/etc/frr/daemons
+        - configs/isp-01.cfg:/etc/frr/frr.conf
+
+    isp-02:
+      kind: linux
+      image: quay.io/frrouting/frr:8.4.1
+      mgmt-ipv4: 192.168.100.32
+      binds:
+        - configs/frr-daemons.cfg:/etc/frr/daemons
+        - configs/isp-02.cfg:/etc/frr/frr.conf
+
+    client1:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool
+      exec:
+        - ip address add 192.168.30.2/24 dev eth1
+        - iperf3 -s -p 5201 -D
+    client2:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool
+      exec:
+        - ip address add 192.168.20.2/24 dev eth1
+
 
   #Telemetry Stack
     #gnmic:
@@ -115,7 +129,6 @@ topology:
     #    - 3100:3100
 
   links:
-
     # CORE Connections
     - endpoints: [core-01:e1-1, core-02:e1-2]
     - endpoints: [core-02:e1-1, core-03:e1-2]
@@ -127,7 +140,12 @@ topology:
     - endpoints: [sp-01:e1-1, core-02:e1-3]
     # DF Connections
     - endpoints: [df-01:e1-1, core-04:e1-3]
-
+    #ISP Conections
+    - endpoints: [df-01:e1-2, isp-01:eth1]
+    - endpoints: [rj-01:e1-2, isp-02:eth2]
+    #Client Connections
+    - endpoints: [df-01:e1-3, client1:eth1]
+    - endpoints: [sp-01:e1-3, client2:eth1]
 
 
 

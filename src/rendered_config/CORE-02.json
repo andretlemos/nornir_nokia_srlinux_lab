@@ -155,7 +155,7 @@
           ]
         },
         "bgp": {
-          "autonomous-system": 65500,
+          "autonomous-system": "65500",
           "router-id": "10.0.100.12",
           "afi-safi": [
             {
@@ -166,7 +166,7 @@
           "group": [
             {
               "group-name": "IBGP",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "next-hop-self": true,
               "afi-safi": [
                 {
@@ -179,7 +179,7 @@
           "neighbor": [
             {
               "peer-address": "10.0.100.11",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "CORE-01",
               "peer-group": "IBGP",
               "transport": {
@@ -188,7 +188,7 @@
             },
             {
               "peer-address": "10.0.100.13",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "CORE-03",
               "peer-group": "IBGP",
               "transport": {
@@ -197,7 +197,7 @@
             },
             {
               "peer-address": "10.0.100.14",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "CORE-04",
               "peer-group": "IBGP",
               "transport": {
@@ -206,7 +206,7 @@
             },
             {
               "peer-address": "10.0.100.15",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "RJ-01",
               "peer-group": "IBGP",
               "transport": {
@@ -215,7 +215,7 @@
             },
             {
               "peer-address": "10.0.100.16",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "SP-01",
               "peer-group": "IBGP",
               "transport": {
@@ -224,7 +224,7 @@
             },
             {
               "peer-address": "10.0.100.17",
-              "peer-as": 65500,
+              "peer-as": "65500",
               "description": "DF-01",
               "peer-group": "IBGP",
               "transport": {

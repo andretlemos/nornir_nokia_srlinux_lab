@@ -31,7 +31,7 @@ def get_ct_from_netbox(task: Task) -> Result:
     device = nb.dcim.devices.get(name=task.host.name)
     if device and device.config_context:
       task.host.data.update(device.config_context)
-    return Result(host=task.host, result="Got config context for {device}")
+    return Result(host=task.host, result="Got config context for {task.host.name}")
 
 def get_interfaces_from_netbox(task: Task) -> Result:
 
@@ -57,6 +57,7 @@ def get_interfaces_from_netbox(task: Task) -> Result:
             "name": iface.name,
             "description": iface.description,
             "ip": ip_address,
+            "enabled": iface.enabled,
             "tags": [tag.name for tag in iface.tags]
         })
 
@@ -72,6 +73,33 @@ def get_interfaces_from_netbox(task: Task) -> Result:
         })
     return Result(host=task.host, result="Got interfaces data for {task.host.name}")
 
+
+def get_ebgp_from_netbox(task:Task) -> Result:
+
+    bgp_sessions = nb.plugins.bgp.session.filter(device=task.host.name)
+    ebgp_list = []
+
+    for neighbor in bgp_sessions:
+
+        if neighbor.status.value == "active":
+            status = "enable"
+        else:
+            status = "disable"
+
+        ebgp_list.append({
+            "local_asn": neighbor.local_as.asn,
+            "remote_asn": neighbor.remote_as.asn,
+            "local_address":  neighbor.local_address.address.split("/")[0],
+            "remote_address": neighbor.remote_address.address.split("/")[0],
+            "status": status,
+            "description": neighbor.description,
+            "peer_group": neighbor.peer_group.name if neighbor.peer_group else None,
+            "export_policy": neighbor.export_policies[0].name if neighbor.export_policies else None,
+            "import_policy": neighbor.import_policies[0].name if neighbor.import_policies else None,
+        })
+
+    task.host.data.update({"ebgp_sessions": ebgp_list})
+    return Result(host=task.host, result="Got ebgp data for {task.host.name}")
 
 
 def render_template_json(task: Task) -> Result:
@@ -130,14 +158,15 @@ def push_config_gnmi(task: Task) -> Result:
 
 
 def main(nr: InitNornir = nr):
-
     nr = nr.with_processors([RichProgressBar()])
     results = nr.run(task=get_ct_from_netbox)
     #print_result(results)
     results = nr.run(task=get_interfaces_from_netbox)
     #print_result(results)
-    results = nr.run(task=render_template_json)
+    results = nr.run(task=get_ebgp_from_netbox)
     #print_result(results)
+    results = nr.run(task=render_template_json)
+    print_result(results)
     results = nr.run(task=push_config_gnmi)
     print_result(results)
 
