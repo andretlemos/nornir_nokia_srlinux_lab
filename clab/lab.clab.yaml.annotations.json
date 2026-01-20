@@ -1,263 +1,11 @@
 {
   "freeTextAnnotations": [
     {
-      "id": "freeText_1768311738095_7f538326",
-      "text": "10.0.0.1/31",
+      "id": "freeText_1768946731318_45c9de58",
+      "text": "AS65500",
       "position": {
-        "x": 187,
-        "y": 116
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768311819039_941167f4",
-      "text": "10.0.0.0/31",
-      "position": {
-        "x": 143,
-        "y": 116
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768311841463_413a27cb",
-      "text": "10.0.0.2/31",
-      "position": {
-        "x": 189,
-        "y": 157
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768311866015_ab42397a",
-      "text": "10.0.0.3/31",
-      "position": {
-        "x": 191,
-        "y": 187
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768311876591_e7e6c7b6",
-      "text": "10.0.0.4/31",
-      "position": {
-        "x": 184,
-        "y": 227
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768311888743_0cc9f631",
-      "text": "10.0.0.5/31",
-      "position": {
-        "x": 144,
-        "y": 228
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768311906039_7fbed15b",
-      "text": "10.0.0.6/31",
-      "position": {
-        "x": 139,
-        "y": 188
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768311920183_8f31f427",
-      "text": "10.0.0.7/31",
-      "position": {
-        "x": 140,
-        "y": 156
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768311991495_0d88602f",
-      "text": "10.0.1.0/31",
-      "position": {
-        "x": 85,
-        "y": 142
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768312011327_eba12a00",
-      "text": "10.0.1.1/31",
-      "position": {
-        "x": 57,
-        "y": 114
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768312026423_0c341b83",
-      "text": "10.0.1.4/31",
-      "position": {
-        "x": 86,
-        "y": 227
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768312047406_3fc51d9b",
-      "text": "10.0.1.5/31",
-      "position": {
-        "x": 54,
-        "y": 198
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768312087647_3bf9f390",
-      "text": "10.0.1.3/31",
-      "position": {
-        "x": 285,
-        "y": 143
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768312098526_8347862f",
-      "text": "10.0.1.2/31",
-      "position": {
-        "x": 241,
-        "y": 116
-      },
-      "fontSize": 5,
-      "fontColor": "#FFFFFF",
-      "backgroundColor": "transparent",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "textDecoration": "none",
-      "textAlign": "left",
-      "fontFamily": "monospace",
-      "rotation": 0,
-      "roundedBackground": true
-    },
-    {
-      "id": "freeText_1768312240974_b6ba7b8a",
-      "text": "ASN 65500",
-      "position": {
-        "x": 155,
-        "y": 88
+        "x": 262,
+        "y": 172
       },
       "fontSize": 14,
       "fontColor": "#FFFFFF",
@@ -285,12 +33,33 @@
       "borderWidth": 2,
       "borderStyle": "solid",
       "rotation": 0,
-      "width": 331,
-      "height": 135,
+      "width": 334,
+      "height": 116,
       "cornerRadius": 0
     }
   ],
-  "groupStyleAnnotations": [],
+  "groupStyleAnnotations": [
+    {
+      "id": "group-1",
+      "name": "Telemetry Stack",
+      "level": "1",
+      "position": {
+        "x": 373.8222061641419,
+        "y": 128.4739440029898
+      },
+      "width": 74.60000000000002,
+      "height": 66.83999999999999,
+      "backgroundColor": "#d9d9d9",
+      "backgroundOpacity": 20,
+      "borderColor": "#dddddd",
+      "borderWidth": 0.5,
+      "borderStyle": "solid",
+      "borderRadius": 0,
+      "labelColor": "#ebecf0",
+      "labelPosition": "top-center",
+      "zIndex": 1
+    }
+  ],
   "cloudNodeAnnotations": [],
   "nodeAnnotations": [
     {
@@ -424,6 +193,51 @@
       "position": {
         "x": 21,
         "y": 273
+      }
+    },
+    {
+      "id": "grafana",
+      "position": {
+        "x": 385,
+        "y": 105
+      },
+      "groupId": "group-1",
+      "group": "Telemetry Stack",
+      "level": "1"
+    },
+    {
+      "id": "prometheus",
+      "position": {
+        "x": 357,
+        "y": 133
+      }
+    },
+    {
+      "id": "gnmic",
+      "position": {
+        "x": 357,
+        "y": 105
+      }
+    },
+    {
+      "id": "loki",
+      "position": {
+        "x": 441,
+        "y": 105
+      }
+    },
+    {
+      "id": "promtail",
+      "position": {
+        "x": 469,
+        "y": 105
+      }
+    },
+    {
+      "id": "client3",
+      "position": {
+        "x": 77,
+        "y": 147
       }
     }
   ],

@@ -6,8 +6,8 @@
 
 PLUGINS = ["netbox_bgp"]
 
-# PLUGINS_CONFIG = {
-#   "netbox_bgp": {
-#     ADD YOUR SETTINGS HERE
-#   }
-# }
+PLUGINS_CONFIG = {
+  "netbox_bgp": {
+    "top_level_menu": True
+  }
+}

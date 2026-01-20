@@ -16,6 +16,22 @@
           "address": "c.st1.ntp.br"
         }
       ]
+    },
+    "logging": {
+      "network-instance": "mgmt",
+      "remote-server": [
+        {
+          "host": "192.168.100.123",
+          "remote-port": 1514,
+          "transport": "udp",
+          "facility": {
+            "facility-name": "local6",
+            "priority": {
+              "match-above": "informational"
+            }
+          }
+        }
+      ]
     }
   },
   "interface": [

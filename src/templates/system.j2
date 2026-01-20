@@ -9,3 +9,15 @@ system:
       - address: "{{ server }}"
 {% endfor %}
 {% endif %}
+  logging:
+    network-instance: mgmt
+    remote-server:
+{% for server in host.data.logging_servers %}
+      - host: "{{ server }}"
+        remote-port: 1514
+        transport: udp
+        facility:
+          facility-name: local6
+          priority:
+            match-above: informational
+{% endfor %}

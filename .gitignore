@@ -1,3 +1,4 @@
 clab/clab-lab/*
 backup_netbox/netbox_backup_base.sql.gz
 nornir.log
+.venv

@@ -56,11 +56,19 @@ sudo containerlab deploy --topo clab/lab.clab.yaml
 ```bash
 python src/nornir_deploy_config.py
 ```
+![Push via gnmi successful ](images/push_config_gnmi.png)
+
 
 ## Topology
 
 ![Architecture Diagram](images/topology.svg)
 
+
+## Visualize Telemetry
+
+Open localhost:3000 and login in Grafafa with admin/admin to visualize routers's telemetry data
+
+![Grafana Visualization](images/dashboard.png)
 
 ## Repository layout
 

@@ -16,6 +16,22 @@
           "address": "c.st1.ntp.br"
         }
       ]
+    },
+    "logging": {
+      "network-instance": "mgmt",
+      "remote-server": [
+        {
+          "host": "192.168.100.123",
+          "remote-port": 1514,
+          "transport": "udp",
+          "facility": {
+            "facility-name": "local6",
+            "priority": {
+              "match-above": "informational"
+            }
+          }
+        }
+      ]
     }
   },
   "interface": [
@@ -110,6 +126,12 @@
                     },
                     {
                       "interface-name": "ethernet-1/1.0",
+                      "passive": false,
+                      "interface-type": "point-to-point",
+                      "admin-state": "enable"
+                    },
+                    {
+                      "interface-name": "ethernet-1/3.0",
                       "passive": false,
                       "interface-type": "point-to-point",
                       "admin-state": "enable"

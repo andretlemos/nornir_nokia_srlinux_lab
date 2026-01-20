@@ -166,7 +166,7 @@ def main(nr: InitNornir = nr):
     results = nr.run(task=get_ebgp_from_netbox)
     #print_result(results)
     results = nr.run(task=render_template_json)
-    print_result(results)
+    #print_result(results)
     results = nr.run(task=push_config_gnmi)
     print_result(results)
 
