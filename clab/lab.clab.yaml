@@ -43,50 +43,49 @@ topology:
       image: quay.io/frrouting/frr:8.4.1
       mgmt-ipv4: 192.168.100.31
       binds:
-        - configs/frr/frr-daemons.cfg:/etc/frr/daemons
-        - configs/frr/isp-01.cfg:/etc/frr/frr.conf
+      - configs/frr/frr-daemons.cfg:/etc/frr/daemons
+      - configs/frr/isp-01.cfg:/etc/frr/frr.conf
 
     isp-02:
       kind: linux
       image: quay.io/frrouting/frr:8.4.1
       mgmt-ipv4: 192.168.100.32
       binds:
-        - configs/frr/frr-daemons.cfg:/etc/frr/daemons
-        - configs/frr/isp-02.cfg:/etc/frr/frr.conf
+      - configs/frr/frr-daemons.cfg:/etc/frr/daemons
+      - configs/frr/isp-02.cfg:/etc/frr/frr.conf
 
     client1:
       kind: linux
       image: ghcr.io/hellt/network-multitool
       exec:
-        - ip address add 192.168.30.2/24 dev eth1
-        - ip route add 192.168.20.0/24 via 192.168.30.1
-        - iperf3 -s -p 5201 -D
+      - ip address add 192.168.30.2/24 dev eth1
+      - ip route add 192.168.20.0/24 via 192.168.30.1
+      - iperf3 -s -p 5201 -D
     client2:
       kind: linux
       image: ghcr.io/hellt/network-multitool
       exec:
-        - ip address add 192.168.20.2/24 dev eth1
-        - ip route add 192.168.30.0/24 via 192.168.20.1
+      - ip address add 192.168.20.2/24 dev eth1
+      - ip route add 192.168.30.0/24 via 192.168.20.1
       binds:
-        - configs/client2:/config
+      - configs/client2:/config
 
     client3:
       kind: linux
       image: ghcr.io/hellt/network-multitool
       exec:
-        - ip address add 192.168.40.2/24 dev eth1
-        - ip route add 192.168.30.0/24 via 192.168.40.1
+      - ip address add 192.168.40.2/24 dev eth1
+      - ip route add 192.168.30.0/24 via 192.168.40.1
       binds:
-        - configs/client3:/config
+      - configs/client3:/config
 
-
-  #Telemetry Stack
+    #Telemetry Stack
     gnmic:
       kind: linux
       mgmt-ipv4: 192.168.100.120
       image: ghcr.io/openconfig/gnmic:0.39.1
       binds:
-        - configs/gnmic/gnmic-config.yml:/gnmic-config.yml:ro
+      - configs/gnmic/gnmic-config.yml:/gnmic-config.yml:ro
       cmd: --config /gnmic-config.yml --log subscribe
 
     prometheus:
@@ -94,42 +93,59 @@ topology:
       mgmt-ipv4: 192.168.100.121
       image: quay.io/prometheus/prometheus:v2.54.1
       binds:
-        - configs/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - configs/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       cmd: --config.file=/etc/prometheus/prometheus.yml
       ports:
-        - 9090:9090
+      - 9090:9090
 
     grafana:
       kind: linux
       mgmt-ipv4: 192.168.100.122
       image: grafana/grafana:11.2.0
       binds:
-        - configs/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
-        - configs/grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
-        - configs/grafana/dashboards:/var/lib/grafana/dashboards
+      - configs/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
+      - configs/grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
+      - configs/grafana/dashboards:/var/lib/grafana/dashboards
       ports:
-        - 3000:3000
+      - 3000:3000
+
+    ### LOGGING STACK ###
+    promtail:
+      kind: linux
+      mgmt-ipv4: 192.168.100.123
+      image: grafana/promtail:3.2.0
+      binds:
+      - configs/promtail:/etc/promtail
+      cmd: --config.file=/etc/promtail/promtail-config.yml
+      ports:
+      - 9080:9080
+
+    loki:
+      kind: linux
+      mgmt-ipv4: 192.168.100.124
+      image: grafana/loki:3.2.0
+      binds:
+      - configs/loki:/etc/loki
+      cmd: --config.file=/etc/loki/loki-config.yml
+      ports:
+      - 3100:3100
 
   links:
-    # CORE Connections
-    - endpoints: [core-01:e1-1, core-02:e1-2]
-    - endpoints: [core-02:e1-1, core-03:e1-2]
-    - endpoints: [core-03:e1-1, core-04:e1-2]
-    - endpoints: [core-04:e1-1, core-01:e1-2]
-    # RJ Connections
-    - endpoints: [rj-01:e1-1, core-01:e1-3]
-    # SP Connections
-    - endpoints: [sp-01:e1-1, core-02:e1-3]
-    # DF Connections
-    - endpoints: [df-01:e1-1, core-04:e1-3]
-    #ISP Conections
-    - endpoints: [df-01:e1-2, isp-01:eth1]
-    - endpoints: [rj-01:e1-2, isp-02:eth2]
-    #Client Connections
-    - endpoints: [df-01:e1-3, client1:eth1]
-    - endpoints: [sp-01:e1-3, client2:eth1]
-    - endpoints: [rj-01:e1-3, client3:eth1]
-
-
-
-
+  # CORE Connections
+  - endpoints: [ core-01:e1-1, core-02:e1-2 ]
+  - endpoints: [ core-02:e1-1, core-03:e1-2 ]
+  - endpoints: [ core-03:e1-1, core-04:e1-2 ]
+  - endpoints: [ core-04:e1-1, core-01:e1-2 ]
+  # RJ Connections
+  - endpoints: [ rj-01:e1-1, core-01:e1-3 ]
+  # SP Connections
+  - endpoints: [ sp-01:e1-1, core-02:e1-3 ]
+  # DF Connections
+  - endpoints: [ df-01:e1-1, core-04:e1-3 ]
+  #ISP Conections
+  - endpoints: [ df-01:e1-2, isp-01:eth1 ]
+  - endpoints: [ rj-01:e1-2, isp-02:eth2 ]
+  #Client Connections
+  - endpoints: [ df-01:e1-3, client1:eth1 ]
+  - endpoints: [ sp-01:e1-3, client2:eth1 ]
+  - endpoints: [ rj-01:e1-3, client3:eth1 ]
