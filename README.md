@@ -11,8 +11,8 @@ A lab repository for automating Nokia SR Linux device configuration using Nornir
 
 - Linux host (tested on Ubuntu)
 - Docker & Docker Compose (for running NetBox)
-- Python 3.8+ and pip
-- Optional: Containerlab (to deploy the virtual topology)
+- Python 3.12+ and uv
+- Containerlab (to deploy the virtual topology)
 
 ## Quickstart
 
