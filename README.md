@@ -64,32 +64,48 @@ python src/nornir_deploy_config.py
 
 ## Visualize Telemetry
 
-Open localhost:3000 and login in Grafafa with admin/admin to visualize routers's telemetry data
+Open localhost:3000 and login in Grafana with admin/admin to visualize routers' telemetry data
 
 ![Grafana Visualization](images/dashboard.png)
 
 ## Generate Traffic
 
 ```bash
-bash clab/traffic.sh
+bash clab/traffic.sh start all
 ```
 
 Script copied from https://github.com/srl-labs/srl-telemetry-lab
+
+## Stopping the Lab
+
+To stop the traffic and destroy the lab topology:
+
+```bash
+bash clab/traffic.sh stop all
+sudo containerlab destroy --topo clab/lab.clab.yaml
+```
+
+To stop Netbox:
+
+```bash
+cd netbox-docker
+docker compose down
+cd ..
+```
 
 ## Repository layout
 
 - `clab/` — Containerlab topology and per-node configuration trees.
 - `netbox-docker/` — Docker build and compose files to run NetBox locally.
-- `inventory/` — Nornir inventory files: `hosts.yaml`, `groups.yaml`, `defaults.yaml`.
-- `templates/` — Jinja2 templates for rendering device JSON/configs.
-- `rendered_config/` — Example rendered configuration output for lab devices.
-- `configuration/` — Python helper modules used across the project.
+- `src/inventory/` — Nornir inventory files: `hosts.yaml`, `groups.yaml`, `defaults.yaml`.
+- `src/templates/` — Jinja2 templates for rendering device JSON/configs.
+- `src/rendered_config/` — Example rendered configuration output for lab devices.
 - `backup_netbox/` — Scripts to export/import NetBox DB snapshots.
 - `clab/lab.clab.yaml` — Topology used for Containerlab.
-- `nornir_deploy_config.py` — Main script to drive config rendering/push (see `--help`).
+- `src/nornir_deploy_config.py` — Main script to drive config rendering/push (see `--help`).
 
 ## Notes & tips
 
-- Inspect and adapt `inventory/` and the Jinja2 templates in `templates/` to fit your environment before running any push operations.
+- Inspect and adapt `src/inventory/` and the Jinja2 templates in `src/templates/` to fit your environment before running any push operations.
 - Use the virtual environment to avoid system package conflicts.
 - If you run NetBox locally, allow some time for services to become healthy before importing data.
