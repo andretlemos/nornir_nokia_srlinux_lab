@@ -68,6 +68,14 @@ Open localhost:3000 and login in Grafafa with admin/admin to visualize routers's
 
 ![Grafana Visualization](images/dashboard.png)
 
+## Generate Traffic
+
+```bash
+bash clab/traffic.sh
+```
+
+Script copied from https://github.com/srl-labs/srl-telemetry-lab
+
 ## Repository layout
 
 - `clab/` — Containerlab topology and per-node configuration trees.
