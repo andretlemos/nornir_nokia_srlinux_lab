@@ -56,6 +56,11 @@ python src/nornir_deploy_config.py
 ```
 ![Push via gnmi successful ](images/push_config_gnmi.png)
 
+7. Run nornir_diff_config to check if the router's config are the same intent configuration. Run every 30 seconds.
+```bash
+python src/nornir_diff_config.py
+```
+![Compliance Check ](images/compliance_check.png)
 
 ## Topology
 
