@@ -5,3 +5,8 @@ scrape_configs:
   - job_name: "gnmic"
     static_configs:
       - targets: ["gnmic:9273"]
+
+  - job_name: "nornir_diff_config"
+    honor_labels: true
+    static_configs:
+      - targets: ["pushgateway:9091"]

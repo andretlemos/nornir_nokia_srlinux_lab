@@ -313,6 +313,18 @@ wheels = [
 ]
 
 [[package]]
+name = "deepdiff"
+version = "8.6.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "orderly-set" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/19/76/36c9aab3d5c19a94091f7c6c6e784efca50d87b124bf026c36e94719f33c/deepdiff-8.6.1.tar.gz", hash = "sha256:ec56d7a769ca80891b5200ec7bd41eec300ced91ebcc7797b41eb2b3f3ff643a", size = 634054, upload-time = "2025-09-03T19:40:41.461Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f7/e6/efe534ef0952b531b630780e19cabd416e2032697019d5295defc6ef9bd9/deepdiff-8.6.1-py3-none-any.whl", hash = "sha256:ee8708a7f7d37fb273a541fa24ad010ed484192cd0c4ffc0fa0ed5e2d4b9e78b", size = 91378, upload-time = "2025-09-03T19:40:39.679Z" },
+]
+
+[[package]]
 name = "dictdiffer"
 version = "0.9.0"
 source = { registry = "https://pypi.org/simple" }
@@ -536,6 +548,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/bc/a0/54c0ca84bca6233aa
 wheels = [
     { url = "https://files.pythonhosted.org/packages/46/3c/36a0a265c920e478cec88faab97169cbc39d5d67822fcbd63eed052112cf/junos_eznc-2.7.5-py2.py3-none-any.whl", hash = "sha256:db94074c50227c217a7669b9efad372d11bb354de4985cffcc7295aa2af80919", size = 206884, upload-time = "2025-09-23T15:03:23.637Z" },
 ]
+
+[[package]]
+name = "logging"
+version = "0.4.9.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/93/4b/979db9e44be09f71e85c9c8cfc42f258adfb7d93ce01deed2788b2948919/logging-0.4.9.6.tar.gz", hash = "sha256:26f6b50773f085042d301085bd1bf5d9f3735704db9f37c1ce6d8b85c38f2417", size = 96029, upload-time = "2013-06-04T23:43:22.086Z" }
 
 [[package]]
 name = "lxml"
@@ -906,6 +924,7 @@ dependencies = [
     { name = "charset-normalizer" },
     { name = "colorama" },
     { name = "cryptography" },
+    { name = "deepdiff" },
     { name = "dictdiffer" },
     { name = "dotenv" },
     { name = "gnmi" },
@@ -915,6 +934,7 @@ dependencies = [
     { name = "invoke" },
     { name = "jinja2" },
     { name = "junos-eznc" },
+    { name = "logging" },
     { name = "lxml" },
     { name = "markdown-it-py" },
     { name = "markupsafe" },
@@ -981,6 +1001,7 @@ requires-dist = [
     { name = "charset-normalizer", specifier = "==3.4.4" },
     { name = "colorama", specifier = "==0.4.6" },
     { name = "cryptography", specifier = "==46.0.3" },
+    { name = "deepdiff", specifier = ">=8.6.1" },
     { name = "dictdiffer", specifier = "==0.9.0" },
     { name = "dotenv", specifier = "==0.9.9" },
     { name = "gnmi", specifier = "==0.0.0a0" },
@@ -990,6 +1011,7 @@ requires-dist = [
     { name = "invoke", specifier = "==2.2.1" },
     { name = "jinja2", specifier = "==3.1.6" },
     { name = "junos-eznc", specifier = "==2.7.5" },
+    { name = "logging", specifier = ">=0.4.9.6" },
     { name = "lxml", specifier = "==6.0.2" },
     { name = "markdown-it-py", specifier = "==4.0.0" },
     { name = "markupsafe", specifier = "==3.0.3" },
@@ -1136,6 +1158,15 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/d6/0c/decd784b5969ddfed7e41d95baaa309f31c896bd7ed22d3a6d29ec1117a1/ntc_templates-8.1.0.tar.gz", hash = "sha256:e570a5bb4ee829d62bfdce3fb46045a40aaa176b134aa0db21542d6518ca4be7", size = 313051, upload-time = "2025-09-22T21:02:55.83Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/10/6d/925c3cd513b13569f32f8a9330b061f594dcde6ca946fb26dce886868b74/ntc_templates-8.1.0-py3-none-any.whl", hash = "sha256:6cea8fdb17e8c72bd7a89bf21a94c184f241ce33c34b074570059d710318acaf", size = 623343, upload-time = "2025-09-22T21:02:53.959Z" },
+]
+
+[[package]]
+name = "orderly-set"
+version = "5.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/4a/88/39c83c35d5e97cc203e9e77a4f93bf87ec89cf6a22ac4818fdcc65d66584/orderly_set-5.5.0.tar.gz", hash = "sha256:e87185c8e4d8afa64e7f8160ee2c542a475b738bc891dc3f58102e654125e6ce", size = 27414, upload-time = "2025-07-10T20:10:55.885Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/12/27/fb8d7338b4d551900fa3e580acbe7a0cf655d940e164cb5c00ec31961094/orderly_set-5.5.0-py3-none-any.whl", hash = "sha256:46f0b801948e98f427b412fcabb831677194c05c3b699b80de260374baa0b1e7", size = 13068, upload-time = "2025-07-10T20:10:54.377Z" },
 ]
 
 [[package]]

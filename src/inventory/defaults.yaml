@@ -15,12 +15,5 @@ connection_options:
     username: admin
     password: NokiaSrl1!
 
-  netmiko:
-    extras:
-      device_type: nokia_srl
-    username: admin
-    password: NokiaSrl1!
-#platform: srl
-
-
-
+username: admin
+password: NokiaSrl1!

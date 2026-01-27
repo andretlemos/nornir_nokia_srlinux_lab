@@ -99,6 +99,13 @@ topology:
       ports:
       - 9090:9090
 
+    pushgateway:
+      kind: linux
+      mgmt-ipv4: 192.168.100.125
+      image: prom/pushgateway:v1.7.0
+      ports:
+        - 9091:9091
+
     grafana:
       kind: linux
       mgmt-ipv4: 192.168.100.122

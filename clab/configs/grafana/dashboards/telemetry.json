@@ -29,6 +29,158 @@
         "x": 0,
         "y": 0
       },
+      "id": 11,
+      "panels": [],
+      "title": "Intend Config",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "default": true,
+        "type": "prometheus",
+        "uid": "PBFA97CFB590B2093"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "dark-red",
+                  "index": 1,
+                  "text": "NOK"
+                },
+                "1": {
+                  "color": "dark-green",
+                  "index": 0,
+                  "text": "OK"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 23,
+        "x": 0,
+        "y": 1
+      },
+      "id": 10,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.2.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "PBFA97CFB590B2093"
+          },
+          "disableTextWrap": false,
+          "editorMode": "code",
+          "expr": "config_match{job=\"nornir_diff_config\"}",
+          "fullMetaSearch": false,
+          "includeNullMetadata": true,
+          "instant": false,
+          "legendFormat": "{{device}}",
+          "range": true,
+          "refId": "A",
+          "useBackend": false
+        }
+      ],
+      "title": "Intend Config",
+      "type": "stat"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 5
+      },
+      "id": 13,
+      "panels": [],
+      "title": "Logs",
+      "type": "row"
+    },
+    {
+      "datasource": {
+        "default": false,
+        "type": "loki",
+        "uid": "P8E80F9AEF21F6940"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 23,
+        "x": 0,
+        "y": 6
+      },
+      "id": 12,
+      "options": {
+        "dedupStrategy": "none",
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": false,
+        "sortOrder": "Descending",
+        "wrapLogMessage": false
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "P8E80F9AEF21F6940"
+          },
+          "editorMode": "code",
+          "expr": "{job=\"nornir_diff_config\"}",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Logs",
+      "type": "logs"
+    },
+    {
+      "collapsed": false,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 14
+      },
       "id": 6,
       "panels": [],
       "title": "$Devices",
@@ -97,10 +249,10 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
-        "w": 15,
+        "h": 6,
+        "w": 13,
         "x": 0,
-        "y": 1
+        "y": 15
       },
       "id": 1,
       "options": {
@@ -181,9 +333,9 @@
       },
       "gridPos": {
         "h": 7,
-        "w": 9,
-        "x": 15,
-        "y": 1
+        "w": 11,
+        "x": 13,
+        "y": 15
       },
       "id": 2,
       "options": {
@@ -283,7 +435,7 @@
         "h": 5,
         "w": 6,
         "x": 0,
-        "y": 8
+        "y": 21
       },
       "id": 5,
       "options": {
@@ -422,7 +574,7 @@
         "h": 5,
         "w": 7,
         "x": 6,
-        "y": 8
+        "y": 21
       },
       "id": 3,
       "options": {
@@ -561,7 +713,7 @@
         "h": 5,
         "w": 11,
         "x": 13,
-        "y": 8
+        "y": 22
       },
       "id": 4,
       "options": {
@@ -663,7 +815,7 @@
         "h": 6,
         "w": 6,
         "x": 0,
-        "y": 13
+        "y": 26
       },
       "id": 7,
       "options": {
@@ -765,7 +917,7 @@
         "h": 6,
         "w": 7,
         "x": 6,
-        "y": 13
+        "y": 26
       },
       "id": 8,
       "options": {
@@ -901,7 +1053,7 @@
         "h": 6,
         "w": 11,
         "x": 13,
-        "y": 13
+        "y": 27
       },
       "id": 9,
       "options": {
@@ -951,9 +1103,9 @@
     "list": [
       {
         "current": {
-          "selected": true,
-          "text": "core-02",
-          "value": "core-02"
+          "selected": false,
+          "text": "core-01",
+          "value": "core-01"
         },
         "datasource": {
           "type": "prometheus",
@@ -978,7 +1130,7 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": "default",
           "value": "default"
         },
@@ -1013,6 +1165,6 @@
   "timezone": "browser",
   "title": "Network Telemetry",
   "uid": "afak86p75mk1sd",
-  "version": 2,
+  "version": 1,
   "weekStart": ""
 }
