@@ -1,6 +1,6 @@
 # nornir_nokia_srlinux_lab
 
-A lab repository for automating Nokia SR Linux device configuration using Nornir, Netmiko, gNMI, Netbox and Containerlab.
+A lab repository for automating Nokia SR Linux device configuration using Nornir, gNMI, Netbox, FastAPI and Containerlab.
 
 ## Overview
 
