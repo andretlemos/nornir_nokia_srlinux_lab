@@ -15,6 +15,7 @@ dependencies = [
     "deepdiff>=8.6.1",
     "dictdiffer==0.9.0",
     "dotenv==0.9.9",
+    "fastapi>=0.128.0",
     "gnmi==0.0.0a0",
     "grpcio==1.76.0",
     "idna==3.11",

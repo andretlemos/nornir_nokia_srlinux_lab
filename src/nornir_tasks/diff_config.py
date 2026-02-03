@@ -12,8 +12,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Pushgateway Base Configuration
 PUSHGATEWAY_BASE = "http://localhost:9091/metrics/job/nornir_diff_config"
-
 LOG_FILE = "clab/configs/promtail/logs/nornir_diff_config.log"
+
+#FastAPI
+FASTAPI_URL = "http://localhost:8800/apply-config"
 
 def log_to_file(message: str):
     with open(LOG_FILE, "a") as f:
@@ -75,7 +77,11 @@ def jsonrpc_diff(task: Task) -> Result:
             diff_text = "\n".join(result.get("result", ["Erro ao ler diff"]))
             diff_output = f"❌ Config does not match:\n{diff_text}"
             compliance_value = 0
-            log_to_file(f"{task.host.name}: {diff_output}")
+            try:
+                requests.post(f"{FASTAPI_URL}/{task.host.name}", timeout=60)
+                log_to_file(f"{task.host.name}: {diff_output}")
+            except Exception as e:
+                log_to_file(f"Error to send a post to FASTAPI for {task.host.name}: {e}")
 
     except Exception as e:
         diff_output = f"Erro de conexão: {str(e)}"

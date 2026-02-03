@@ -79,7 +79,7 @@ def get_ebgp_from_netbox(task:Task) -> Result:
     """
     Retrieves eBGP session details from NetBox and updates the task's host data.
 
-    Fetches active BGP sessions for the device, determines their status, and collects 
+    Fetches active BGP sessions for the device, determines their status, and collects
     details such as ASNs, addresses, and policies.
 
     Args:
@@ -166,10 +166,16 @@ def push_config_gnmi(task: Task) -> Result:
         update=[
             ("/", rendered)
         ],
-        severity_level=logging.DEBUG     
+        severity_level=logging.DEBUG
     )
     return Result(host=task.host, result=r.result)
-    
+
+
+def send_config_one_router(host):
+    nr = InitNornir(config_file="config.yaml")
+    nr = nr.filter(name=host)
+    results = nr.run(task=push_config_gnmi)
+    print_result(results)
 
 
 def main(nr: InitNornir = nr):
@@ -197,7 +203,7 @@ def main(nr: InitNornir = nr):
     #print_result(results)
     results = nr.run(task=push_config_gnmi)
     print_result(results)
-    
+
 
 
 if __name__ == "__main__":

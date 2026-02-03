@@ -52,13 +52,19 @@ sudo containerlab deploy --topo clab/lab.clab.yaml
 6. Render or push device configs using the project's scripts:
 
 ```bash
-python src/nornir_deploy_config.py
+python src/nornir_tasks/nornir_deploy_config.py
 ```
 ![Push via gnmi successful ](images/push_config_gnmi.png)
 
-7. Run nornir_diff_config to check if the router's config are the same intent configuration. Run every 30 seconds.
+7. Enable FastAPI (Nornir API) in another terminal
 ```bash
-python src/nornir_diff_config.py
+ uvicorn app.main:app --reload --host 0.0.0.0 --port 8800
+```
+![FastAPI docs ](images/fastapi.png)
+
+8. Run nornir_diff_config to check if the router's config are the same intent configuration. Run every 30 seconds.
+```bash
+python src/nornir_tasks/nornir_diff_config.py
 ```
 ![Compliance Check ](images/compliance_check.png)
 
@@ -107,7 +113,8 @@ cd ..
 - `src/rendered_config/` — Example rendered configuration output for lab devices.
 - `backup_netbox/` — Scripts to export/import NetBox DB snapshots.
 - `clab/lab.clab.yaml` — Topology used for Containerlab.
-- `src/nornir_deploy_config.py` — Main script to drive config rendering/push (see `--help`).
+- `src/nornir_tasks/deploy_config.py` — Main script to drive config rendering/push.
+- `src/nornir_tasks/diff_config.py` — script to verify every 30 seconds with the router config is different from intent config.
 
 ## Notes & tips
 
