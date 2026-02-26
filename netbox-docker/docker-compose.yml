@@ -1,20 +1,19 @@
 services:
   netbox: &netbox
-    image: docker.io/netboxcommunity/netbox:${VERSION-v4.4-3.4.1}
+    image: docker.io/netboxcommunity/netbox:${VERSION-v4.5-4.0.1}
     depends_on:
       - postgres
       - redis
       - redis-cache
-    restart: unless-stopped
     env_file: env/netbox.env
-    user: "unit:root"
+    user: "netbox:root"
     healthcheck:
       test: curl -f http://localhost:8080/login/ || exit 1
       start_period: 90s
       timeout: 3s
       interval: 15s
     volumes:
-      - ./configuration:/etc/netbox/config:z,ro
+      - ./configuration:/etc/netbox/config:z,ro      
       - netbox-media-files:/opt/netbox/netbox/media:rw
       - netbox-reports-files:/opt/netbox/netbox/reports:rw
       - netbox-scripts-files:/opt/netbox/netbox/scripts:rw
@@ -23,7 +22,6 @@ services:
     depends_on:
       netbox:
         condition: service_healthy
-    restart: unless-stopped
     command:
       - /opt/netbox/venv/bin/python
       - /opt/netbox/netbox/manage.py
@@ -36,8 +34,7 @@ services:
 
   # postgres
   postgres:
-    image: docker.io/postgres:17-alpine
-    restart: unless-stopped
+    image: docker.io/postgres:18-alpine
     healthcheck:
       test: pg_isready -q -t 2 -d $$POSTGRES_DB -U $$POSTGRES_USER
       start_period: 20s
@@ -46,12 +43,11 @@ services:
       retries: 5
     env_file: env/postgres.env
     volumes:
-      - netbox-postgres-data:/var/lib/postgresql/data
+      - netbox-postgres:/var/lib/postgresql
 
   # redis
   redis:
-    image: docker.io/valkey/valkey:8.1-alpine
-    restart: unless-stopped
+    image: docker.io/valkey/valkey:9.0-alpine
     command:
       - sh
       - -c # this is to evaluate the $REDIS_PASSWORD from the env
@@ -66,8 +62,7 @@ services:
     volumes:
       - netbox-redis-data:/data
   redis-cache:
-    image: docker.io/valkey/valkey:8.1-alpine
-    restart: unless-stopped
+    image: docker.io/valkey/valkey:9.0-alpine
     command:
       - sh
       - -c # this is to evaluate the $REDIS_PASSWORD from the env
@@ -80,7 +75,7 @@ services:
 volumes:
   netbox-media-files:
     driver: local
-  netbox-postgres-data:
+  netbox-postgres:
     driver: local
   netbox-redis-cache-data:
     driver: local
